@@ -6,7 +6,7 @@ As browser vendors make efforts to provide their users with additional privacy, 
 
 ## Solution - MASQUE
 
-<p>To achieve IP privacy for browser users, the browser will utilize [Multiplexed Application Substrate over QUIC Encryption (MASQUE)](https://datatracker.ietf.org/wg/masque/about/) to forward its HTTP traffic through an IP privatizing server (IPPS).  The HTTP traffic that servers see will have a source IP address of the IPPS rather than that of the browser, thus hiding the users’ IP address from the server.  The browser will utilize end-to-end encryption via TLS to the target server so the IPPS won’t be privy to the contents of the HTTP traffic.  For HTTP/1 and HTTP/2 traffic the browser’s TLS byte-stream is sent via MASQUE to the IPPS and then the IPPS initiates a TCP connection to the target server carrying that TLS byte-stream, essentially just adding the IP and TCP headers.  For HTTP/3 traffic the browser assembled UDP packets are sent via MASQUE to the IPPS and then the IPPS sends the UDP packets to the target server, essentially just adding the IP header.  The IPPS forwards data received from the target server back to the browser via the same MASQUE streams that the outgoing data traversed.
+<p>To achieve IP privacy for browser users, the browser will utilize <a href="https://datatracker.ietf.org/wg/masque/about/">Multiplexed Application Substrate over QUIC Encryption (MASQUE)</a> to forward its HTTP traffic through an IP privatizing server (IPPS).  The HTTP traffic that servers see will have a source IP address of the IPPS rather than that of the browser, thus hiding the users’ IP address from the server.  The browser will utilize end-to-end encryption via TLS to the target server so the IPPS won’t be privy to the contents of the HTTP traffic.  For HTTP/1 and HTTP/2 traffic the browser’s TLS byte-stream is sent via MASQUE to the IPPS and then the IPPS initiates a TCP connection to the target server carrying that TLS byte-stream, essentially just adding the IP and TCP headers.  For HTTP/3 traffic the browser assembled UDP packets are sent via MASQUE to the IPPS and then the IPPS sends the UDP packets to the target server, essentially just adding the IP header.  The IPPS forwards data received from the target server back to the browser via the same MASQUE streams that the outgoing data traversed.
 </p>
 <p>The CONNECT and CONNECT-UDP HTTP methods can be used by the browser to inform the IPPS of the destination IP address and port of the target server.  By sharing only the destination IP address with the IPPS and not the target server hostname the privacy properties are improved and the client’s DNS configuration can continue to handle all host resolution.  By comparison a DNS server has more insight into the sites a user browses to because it knows hostnames which contain more information than the IP addresses of the target servers.
 </p>
@@ -37,15 +37,15 @@ As browser vendors make efforts to provide their users with additional privacy, 
 <p><b>General UDP Encapsulation (GUE)</b><br>
 GUE is an efficient protocol using UDP to encapsulate packets of different IP protocols.  The simpler nature of the encapsulation could allow for offloading of encapsulation to network hardware, but hardware support is likely many years away.  Using GUE would require browsers to do TCP which would add significant additional complexity.<br>
 </p>
-<p>**HTTP(S) CONNECT proxy**<br>
+<p><b>HTTP(S) CONNECT proxy</b><br>
 HTTP CONNECT proxying is another alternative but is unfortunately limited to only proxying TCP presently which would preclude browsers using modern protocols like HTTP/3.<br>
 </p>
-<p>**SOCKS proxy**<br>
+<p><b>SOCKS proxy</b><br>
 SOCKS proxying is another alternative but doesn’t offer encryption of signaling.<br>
 </p>
-<p>**VPN**<br>
+<p><b>VPN</b><br>
 The IPPS could operate a VPN.  VPNs typically perform IP packet encapsulation which would either require the browser to run with administrator privileges to encapsulate IP packets from the OS or would require the browser to do TCP which would add significant additional complexity.<br>
 </p>
-<p>**SSH Tunnel**<br>
+<p><b>SSH Tunnel</b><br>
 The IPPS could permit SSH tunnelling but SSH tunnelling is limited to using TCP.
 </p>
