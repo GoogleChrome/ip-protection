@@ -34,7 +34,7 @@ As browser vendors make efforts to provide their users with additional privacy, 
 
 <p>There are other protocols that can be used between the browser and IPPS.  Each has their particular advantages and disadvantages.  This proposal uses MASQUE as it was designed for IP proxying and leverages the latest transport protocol, HTTP/3.  Some alternatives considered:
 </p>
-<p>__General UDP Encapsulation (GUE)__<br>
+<p><b>General UDP Encapsulation (GUE)</b><br>
 GUE is an efficient protocol using UDP to encapsulate packets of different IP protocols.  The simpler nature of the encapsulation could allow for offloading of encapsulation to network hardware, but hardware support is likely many years away.  Using GUE would require browsers to do TCP which would add significant additional complexity.<br>
 </p>
 <p>**HTTP(S) CONNECT proxy**<br>
