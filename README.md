@@ -1,45 +1,29 @@
-## Willful IP Blindness
+# Gnatcatcher <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cuban_Gnatcatcher._Polioptila_lembeyei_._Endemic_-_Flickr_-_gailhampshire.jpg/320px-Cuban_Gnatcatcher._Polioptila_lembeyei_._Endemic_-_Flickr_-_gailhampshire.jpg" height="50px">
 
-## Introduction
 
-IP addresses by their nature provide a unique identifier for a client such that they can be found and routed to over the open internet. In the face of growing concerns about privacy, this feature of the protocol has turned into a bug in that if an IP address is stable over a period of time (which it often is), it can be used to identify users across first party websites (which runs afoul of Michael Kleber’s proposed [Privacy Model for the Web](https://github.com/michaelkleber/privacy-model)). Since it is a passive source of information, the [Privacy Budget](https://github.com/bslassey/privacy-budget) explainer describes that it must be considered a consumed source of identifying information for all sites and automatically deducted from the budget. This is particularly problematic for APIs which may be large sources of information in themselves (such as [FLoC](https://github.com/jkarlin/floc)) as the combination would exceed any reasonable budget. For websites that need more API access in the face of the Privacy Budget than what remains after IP address access is deducted, we need a way for them to opt out of being exposed to this information.
+**Global Network Address Translation Combined with Audited and Trusted CDN or HTTP-Proxy Eliminating Reidentification**
 
-## Goals
+## Background
 
-The goal of this is to provide a mechanism for HTTP applications to blind themselves to IP address and other identifying network information such as connection pooling behavior and advertise that fact to clients such that they can change their behaviour accordingly.
+We have previously proposed two separate solutions for IP Blindness: Near-Path NAT and Willful IP Blindness
 
-Some applications will be able to live behind an IP-blinded endpoint and some will not.  A goal of this explainer is to start a conversation about what uses could live with IP-blinding — and for use cases that could _not_ live with it, what relaxation of blinding could meet those uses without allowing full IP-based tracking.
 
-It is also a goal of this proposal to not interfere with the normal operations of servers, including the use of IP address as bot, DoS and SPAM detection.
+### Near-Path NAT
 
-## Non-goals
+Explained [here](near_path_nat.md). 
 
-It is not a goal of this proposal to provide universal IP privacy. 
+The fundamental benefit of this proposal is that no server side changes are necessary to guarantee universal IP address privacy.  This makes roll-out easy for sites and users.  As the explainer describes, the client IP address and port tuple visible to first-party servers is constant thus facilitating pre-existing anti-abuse mechanisms.  Abuse prevention for third-party resources requires changes and additional complexity however, for example shifting from reliance on client IP addresses as conveying trust to other trust-conveyance mechanisms like [Trust Tokens](https://github.com/WICG/trust-token-api).
 
-## Proposed Mechanism
 
-Consider the high-level division of an HTTP serving stack into its serving infrastructure layer and its application layer.  The serving infrastructure has access to the IP address and other network identifiers, but not the application data while the application has access to the application data but not the network identifiers. In this way, the two sets of information cannot be combined to produce a durably identifying fingerprint. 
+### Willful IP Blindness
 
-One could imagine making this cut at other layers in the typical path between a client and the http application such as at the [network operator](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.310.8986&rep=rep1&type=pdf), [edge cache](https://blog.cloudflare.com/1111-warp-better-vpn/) or [client](https://brave.com/vpn0-a-privacy-preserving-distributed-virtual-private-network/).
+Explained [here](willful_ip_blindness.md)
 
-We propose introducing a signed attestation (perhaps in the form of an HTTP header) that advertises the fact that a server masks IP addresses and other identifying network information from the application layer of the services that it hosts. A CDN could offer this as a feature to the services they host such that the hosted service can access more APIs than would otherwise be available because their Privacy Budget hasn’t been exhausted on the IP address. Similarly, reverse proxies could provide the same service without the burden of hosting the services.
+This proposal facilitates use of IP addresses by anti-abuse layers while preventing reidentification of users by their IP address in application serving layers. Audits are used to enforce the division between the two layers.  These audits are challenging and complicated to complete and can require sites to rearchitect to ensure the division between the two layers is defined, enforced and visible to auditors.  Roll-out is hence more cumbersome.
 
-## Policy Enforcement Mechanisms
 
-### Audit
+## Proposal: Why not both? <img src="https://i.imgur.com/c7NJRa2.gif" height="50px">
 
-Optionally, the certificate extension can include a signed assertion from an organization that asserts that the server operator is in compliance with the agreed upon policies and verifies that through some audit mechanism. Clients can choose to only trust the assertions of certificate extensions with signatures of organizations that they trust.
+We can get the strength of both by using the Near-Path NAT (or some other proxying solution) for any connection that isn’t participating in Willful IP Blindness. This means at a baseline users' IP addresses will be hidden, but that sites can do the extra work to attest that they aren’t misusing IP addresses if they would like to have direct connections.
 
-### Spot checking
-
-A public CDN or reverse proxy could be spot checked periodically. Anyone can set up an instance on a public CDN and test to see if it reveals network identifiers. This could be done by an auditor as part of its normal checks or crowd-sourced from volunteers. CDNs advertising IP privacy and found to be exposing network identifiers can be block-listed such that their privatization assertion is ignored and the content they host have the IP address accounted for in their privacy budget.
-
-## Open questions
-
-### Geo-IP
-
-IP is used by many services to give roughly geo-located content and to obey local laws and regulations. There are a couple options. There is already the[ Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API), but we probably don’t want to condition people on granting high precision geolocation to most sites. Presumably better, since this is the removal of previously passively available information, geo-ip-granularity location could be made available through a client hint, which also allows the sites consuming the information to be tracked, measured and potentially denied. Alternatively, if policy allows it, the privatizer could provide geo-IP information to the hosted services.  Providing country-level location information to the hosted service would allow services to conform to local laws while at the same time not providing significant identifying information.
-
-### DoS and Fraud Prevention
-
-Since IP is used as a signal for DoS and Fraud detection and prevention it is important to think through the implications of removing that signal for some use cases. To start, this proposal is opt-in, so services that rely on IP as a key signal do not need to opt into being blinded. Clearly some services will want to use APIs that reveal large amounts of entropy and also prevent DoS and Fraud though. By design under this proposal, IP is still available to part of the serving stack such that DoS protections can be implemented that still fully incorporate IP address. Similarly, IP signals will be available to the blinder to be incorporated into fraud prevention. Additionally, [Trust Tokens](https://github.com/WICG/trust-token-api) could be used to use trust derived from a first party notion of identity in a third party context.
+Put another way, Near-Path NAT can fill the role of the blinding reverse proxy described in Willful IP Blindness for the majority of the web. There does exist a small subset of web service providers who need additional control (mainly 3rd party service providers for whom the stable first party IP address mappings are not a sufficient anti-abuse mechanism) who can choose to go through an audit process such that the client can make a direct connection assured that the IP address won’t be used for tracking purposes.
