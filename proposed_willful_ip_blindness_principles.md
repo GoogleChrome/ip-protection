@@ -37,7 +37,7 @@ Selecting which particular server should respond to a user’s request may requi
 
 ### Conforming use #2: Regulatory and legal compliance
 
-Ensuring a website conforms to local regulatory and legal requirements means the website needs to know which country, and in some cases state (e.g. CCPA), client traffic originates from.  Generally, the country and state can be derived from the client’s IP address.  To facilitate this regulatory and legal conformance, WIB allows for inferring geolocation from IP addresses down to country level and sub-country <a href="https://en.wikipedia.org/wiki/Administrative_division">administrative divisions</a> (e.g. states within countries) of at least 500,000 people (500,000 people covers all US states).  Use of more accurate geolocation information from IP addresses is subject to the <a href="proposed_willful_ip_blindness_principles.md#additional-uses-of-ip-addresses">Additional uses of IP addresses section</a> below.  <u>General use of country level geolocation information from IP addresses conforms to WIB principles</u> due to the many far reaching implications of country-level regulations.
+Ensuring a website conforms to local regulatory and legal requirements means the website needs to know which country, and in some cases state (e.g. CCPA), client traffic originates from.  Generally, the country and state can be derived from the client’s IP address.  To facilitate this regulatory and legal conformance, WIB allows for inferring geolocation from IP addresses down to country level and sub-country <a href="https://en.wikipedia.org/wiki/Administrative_division">administrative divisions</a> (e.g. states within countries) of at least 500,000 people (500,000 people covers all US states).  Use of more accurate geolocation information from IP addresses is subject to the <a href="proposed_willful_ip_blindness_principles.md#additional-uses-of-ip-addresses">Additional uses of IP addresses section</a> below.  <b>General use of country level geolocation information from IP addresses conforms to WIB principles</b> due to the many far reaching implications of country-level regulations.
 
 ### Conforming use #3: Abuse prevention
 
@@ -51,7 +51,7 @@ Unfortunately, DoS attacks are commonplace on the internet, and hence protecting
 
 IP addresses are critical to detect, identify, block, and prevent infected devices, botnets, command and control servers, account hijacking, cookie theft, spam, and invalid traffic which would otherwise erode the web’s functionality and ecosystem’s success.  IP addresses can also be used to facilitate account recovery.
 
-<p>**Note:** While IP addresses remain a critical piece of abuse prevention today, their use still poses a potential privacy risk to users.  Anti-abuse mechanism implementers need to plan for long term migration to privacy preserving mechanisms like <a href="https://github.com/WICG/trust-token-api">Trust Tokens</a> or <a href="proposed_willful_ip_blindness_principles.md#domain-partitioning-ip-addresses">domain partitioned IP addresses</a> to reduce this potential privacy risk.
+<p><b>Note:</b> While IP addresses remain a critical piece of abuse prevention today, their use still poses a potential privacy risk to users.  Anti-abuse mechanism implementers need to plan for long term migration to privacy preserving mechanisms like <a href="https://github.com/WICG/trust-token-api">Trust Tokens</a> or <a href="proposed_willful_ip_blindness_principles.md#domain-partitioning-ip-addresses">domain partitioned IP addresses</a> to reduce this potential privacy risk.
 </p>
 
 ### Conforming use #4: Rare issue investigation
@@ -60,7 +60,7 @@ In what should be extremely rare cases, it may be necessary to use IP addresses 
 
 ## Additional Uses of IP Addresses 
 
-Apart from the conforming uses listed above, a site may choose to access IP addresses at a finer-grained level (e.g., geographical advertisement targeting that is more specific than what is covered by <a href="proposed_willful_ip_blindness_principles.md#conforming-use-#2:-regulatory-and-legal-compliance">Conforming Use #2</a>).  In this case, the site must communicate the level of identifiability of these additional uses to the browser, which can adjust its behavior.
+Apart from the conforming uses listed above, a site may choose to access IP addresses at a finer-grained level (e.g., geographical advertisement targeting that is more specific than what is covered by <a href="proposed_willful_ip_blindness_principles.md#conforming-use-2-regulatory-and-legal-compliance">Conforming Use #2</a>).  In this case, the site must communicate the level of identifiability of these additional uses to the browser, which can adjust its behavior.
 
 ## Methods of Conformance
 
@@ -93,7 +93,8 @@ While domain partitioned IP addresses prevent cross-site re-identification, they
 Website operators must implement internal controls to ensure that out-of-band access to the IP address conforms to WIB principles.  In order to indicate this method of conformance, access to logs containing IP addresses must have proper access controls in place:
 1. Any person with access to the log must acknowledge and agree to only using the log’s information for a conforming purpose.
 2. Any computer program with access to the log must be reviewed to ensure its output/effects are limited to conforming purposes.
-ISO 27001 or SOC 2 conformance can help ensure appropriate access controls are in place.
+<p>ISO 27001 or SOC 2 conformance can help ensure appropriate access controls are in place.
+</p>
 
 ## Additional Considerations
 
