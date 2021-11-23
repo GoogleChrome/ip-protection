@@ -29,6 +29,9 @@ As browser vendors make efforts to provide their users with additional privacy, 
 </p>
 <p>To keep stable IP and/or port mappings between clients and first party pages, the clients need to inform the IPPS about which proxied connections are first party and which are third party, and for the third party requests the client needs to inform the IPPS what the corresponding first party is.  This additional information needs to accompany the CONNECT header, as an additional header or some other augmentation mechanism.
 </p>
+<p>
+Finally, the operator of an IP Privatizer Service must provide reasonable guarantees to its users that it is not monitoring the traffic flowing through it for the purposes of tracking users. There are two key pieces of information that are exposed to an IP Privatizing Service, the IP address of the client (which identifies the client) and the destination server (which identifies the browsing habits of the user). The operator could provide guarantees via code inspection and audit to demonstrate that these two pieces of information are never stored together. Alternatively, there could be two operators of the service, one which operates a first layer privatizer which has access to the client’s IP address but not information about the destination server and the second which sees the destination server, but not the client’s IP address.
+</p>
 
 ## Alternate Encapsulation Protocols Considered
 
