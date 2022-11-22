@@ -79,5 +79,5 @@ We will collaborate with ISPs, CDNs, third parties, and destination sites toward
 
 As IP Protection evolves, we believe policy will have a part in the overall solution to address circumvention by websites. When needed, we'll develop the policy and seek input from the ecosystem. Our intent for a policy within the proposal will be to encourage web services to be accountable for the usage and sharing of client IP addresses given the sensitivity of IP as an identifying data point. By creating  transparency around the use of IP addresses, we hope to promote industry accountability regarding how IP addresses are accessed and used in the web ecosystem.
 
-We welcome feedback on this proposal, especially with regard to some of the [open questions](https://github.com/spanicker/ip-blindness/issues?q=is%3Aissue+is%3Aopen+label%3A%22feedback+wanted%22) we are considering.
+We welcome feedback on this proposal, especially with regard to some of the [open questions](https://github.com/spanicker/ip-blindness/issues?q=is%3Aissue+is%3Aopen+label%3A%22open+question%22) we are considering.
 
