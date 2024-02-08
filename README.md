@@ -6,7 +6,7 @@ As browser vendors make efforts to provide their users with additional privacy, 
 
 However, in addition to being used as a possible tracking vector, IP addresses have been, and will continue to be, instrumental in routing traffic, preventing fraud and abuse, and performing other important functions for network operators and domains.
 
-Therefore, any privacy solution for protecting IP addresses must account for both user privacy and the safety and functionality of the web. This proposal initially focuses on efforts where IP addresses are most likely to be used as a vector for tracking in a third-party context. 
+Therefore, any privacy solution for protecting IP addresses must account for both user privacy and the safety and functionality of the web. This proposal initially focuses on efforts where IP addresses are most likely to be used as a vector for tracking in a third-party context.
 
 IP Protection will evolve and broaden over time in conjunction with ecosystem changes to continue to protect users’ privacy from cross-site tracking.
 
