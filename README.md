@@ -2,32 +2,32 @@
 
 ## Introduction
 
-As browser vendors make efforts to provide their users with additional privacy, the user’s IP address continues to make it feasible to associate users’ activities across origins that otherwise wouldn’t be possible. This information can be combined over time to create a unique, persistent user profile and track a user’s activity across the web, which represents a threat to their privacy. Moreover, unlike with third-party cookies, there is no straightforward way for users to opt out of this kind of covert tracking. 
+As browser vendors make efforts to provide their users with additional privacy, a user’s IP address continues to make it feasible to associate their activities across origins when that otherwise wouldn’t be possible. This information can be combined over time to create a unique, persistent user profile and track a user’s activity across the web. This represents a threat to their privacy. Moreover, unlike with third-party cookies, there is no straightforward way for users to opt out of this kind of covert tracking.
 
-In addition to being used as a possible tracking vector, IP addresses have been and will continue to be instrumental in routing traffic, preventing fraud and abuse, and performing other important functions for network operators and domains. 
+However, in addition to being used as a possible tracking vector, IP addresses have been, and will continue to be, instrumental in routing traffic, preventing fraud and abuse, and performing other important functions for network operators and domains.
 
-Therefore, any IP address privacy solution must account for both user privacy and the safety and functionality of the web. This proposal initially focuses on efforts where IP addresses are most likely to be used as a vector for tracking in a third-party context. 
+Therefore, any privacy solution for protecting IP addresses must account for both user privacy and the safety and functionality of the web. This proposal initially focuses on efforts where IP addresses are most likely to be used as a vector for tracking in a third-party context.
 
 IP Protection will evolve and broaden over time in conjunction with ecosystem changes to continue to protect users’ privacy from cross-site tracking.
 
 
 ## Cross-site tracking and the role of IP addresses
-There are various definitions for “tracking” used in the web ecosystem. We will initially use Mozilla’s definition for cross-site tracking as  it has served as an inspiration for other browser policies. 
+There are various definitions for “tracking” used in the web ecosystem. We will initially follow Mozilla’s definition for cross-site tracking, as it has served as a starting point for other browser policies.
 
 Mozilla defines [tracking](https://wiki.mozilla.org/Security/Anti_tracking_policy#Tracking_Definition) as “...the collection of data regarding a particular user's activity across multiple websites or applications (i.e., first parties) that aren’t owned by the data collector, and the retention, use, or sharing of data derived from that activity with parties other than the first party on which it was collected.”
 
-Browsers are moving against cross-site tracking. For Chrome, this [includes phasing out third-party cookies and limiting fingerprinting](https://privacysandbox.com/open-web/), while ensuring the web stays healthy and vibrant. One way to limit fingerprinting is by limiting sources of identifiable information such as IP addresses.
+Browsers are moving against cross-site tracking. For Chrome, this move [includes phasing out third-party cookies and limiting fingerprinting](https://privacysandbox.com/open-web/), while ensuring the web stays healthy and vibrant. One way to limit fingerprinting is by limiting sources of identifiable information such as IP addresses.
 
-An IP address is an effective cross-site identifier as it is highly unique, relatively stable, cheap to collect and the applications of IP addresses by websites are not detectable by the browser. Therefore limiting access to IP addresses is important to prevent other methods of cross-site tracking beyond third-party cookies.
+An IP address is an effective cross-site identifier, as it is highly unique, relatively stable, and easy to collect. The use of IP addresses by websites and services are also not detectable by the browser. Therefore limiting access to IP addresses is important to prevent methods of cross-site tracking beyond third-party cookies.
 
-Based on how impactful IP addresses are for tracking, it would make sense to first focus on third parties identified as potentially using IP addresses for web-wide cross-site tracking. We’ll explore leveraging methods similar to other browsers and existing lists that identify these third parties. 
+With this in mind, Chrome will first focus on third parties identified as potentially using IP addresses for web-wide cross-site tracking. We’ll explore using methods similar to other browsers, including using lists that identify these third parties.
 
-Chrome’s evolved focus on third-party tracking has emerged from feedback received on the Gnatcatcher proposal. Chrome wants to focus on behaviors that are most likely to be using IP for tracking users across sites in ways that might not align with user expectations of privacy. Chrome will work with the ecosystem to help preserve privacy while not breaking key uses on the web.
+Chrome’s evolved focus on cross-site tracking has emerged from feedback received on the Gnatcatcher proposal. Chrome wants to focus on behaviors that are most likely to be using IP addresses for tracking users across sites in ways that might not align with user expectations of privacy. Chrome will work with the ecosystem to help preserve privacy while not bwhile still maintaining anti abuse use cases.
 
 
 
 ## Proposal
-Chrome is reintroducing a proposal to protect users against cross-site tracking via IP addresses. This proposal is a privacy proxy that anonymizes IP addresses for qualifying traffic as described above.
+Chrome is reintroducing a proposal to protect users against cross-site tracking via IP addresses. This proposal involves the use of a privacy proxy that masks IP addresses for qualifying traffic as described previously.
 
 **Goals**
 
@@ -38,14 +38,23 @@ Chrome is reintroducing a proposal to protect users against cross-site tracking 
 
 #### Core requirements
 
-- the destination origin doesn’t see the client’s original IP address
-- the proxy and network intermediaries are not privy to the contents of the traffic.
+- The destination origin doesn’t see the client’s original IP address.
+- Google can’t see the origin that clients interact with.
+- No single proxy can see the origins that clients interact with and the clients' original IP address.
+- IP addresses of the proxies cannot be used as stable identifiers.
+- We are using a list-based approach and only domains on the list in a third-party context will be impacted. More information below.
 
-To meet these requirements, this proposal prioritizes proxying eligible third-party traffic through the Privacy Proxy. 
+To meet these requirements, this proposal prioritizes routing eligible third-party traffic through two proxies. To identify which third-party traffic goes through the proxies, IP Protection is using a list-based approach. Connections to origins that are on the list but are accessed in a first-party context will not be proxied through this service.  For example, if an analytics company is on the list of domains and a user navigates directly to the site, that site will still be able to observe the user’s IP address, instead of the proxied IP address. However, if that domain on the list loads in a third-party context, the connection will be proxied and the user's IP address will not be visible to the site.
 
-This will use CONNECT and CONNECT-UDP (with MASQUE), to forward traffic. There is an end-to-end encrypted tunnel via TLS, from Chrome to the destination server.
+For proxied third-party traffic, the DNS will be resolved at the second proxy.
 
-We are considering using 2 hops for improved privacy. A second proxy would be run by an external CDN, while Google runs the first hop. This ensures that neither proxy can see both the client IP address and the destination. CONNECT & CONNECT-UDP support chaining of proxies.
+Chrome is taking the following steps to prevent user identifiers, including IP address, from being linked to origin-bound traffic:
+
+- IP Protection will use CONNECT and CONNECT-UDP (MASQUE) to forward traffic. There is an end-to-end encrypted tunnel via TLS or QUIC from Chrome to the destination server. Separate connections will use different IP addresses from the proxies.
+
+- We are using two proxies for improved privacy. A second proxy (proxyB) will be run by an external CDN, while Google runs the first proxy (proxyA). This ensures that neither proxy can see both the client IP address and the destination. This means that the Google proxy cannot link clients to the destination origins they’re visiting. CONNECT and CONNECT-UDP support chaining of proxies. Connections through the proxies are encrypted multiple times to prevent Google from being able to access browsing data. In particular, the connection client-website is end-to-end encrypted, and so are the client-proxyA and client-proxyB connections. Because of this, the proxyA (operated by Google) will only be able to see the client IP address but won't be able to know which website is visited. The proxyB (operated by an external CDN) will be able to see the hostname of the website, but it won't know which client IP is accessing it. Neither proxy can see the URL nor the data due to the end-to-end encryption. 
+
+- Chrome will employ an [RSA blind signature scheme](https://datatracker.ietf.org/doc/draft-hendrickson-privacypass-public-metadata/) between client authentication and proxy usage to isolate client identity from all proxy servers. This will include strict and open source bounds on what metadata is shared with proxies during this authentication process. Chrome is committed to ensuring a user cannot be uniquely identified via their unblinded token or associated authentication metadata.
 
 #### Anti-abuse
 
@@ -68,16 +77,18 @@ To limit abuse of the proxy, we are considering the following non-exhaustive set
 
 In addition to preventative measures, we are also looking for opportunities to allow websites to report DoS and other abuse. Additionally, we are actively exploring new anti-abuse defenses to enable third party services to prevent abuse and fraud.
 
-#### GeoIP
+#### IP geolocation
 
-IP-based geolocation is used by a swath of services within proxied third party traffic to comply with local laws & regulation and serve content that is relevant to users, such as: content localization (e.g. language), local cache assignment, and geo targeting for ads.
-To support these needs, the Privacy Proxy will assign IP addresses that represent the user’s coarse location, including country.
+IP-based geolocation is used by a swath of services within proxied third-party traffic, to comply with local laws and regulations and serve content that is relevant to users. Use cases include content localization, local cache assignment, and geo-targeting for ads. To support these needs but with privacy controls in place, the proxy will assign IP addresses that represent the user’s coarse location, including country. For more information, read the [IP Geolocation Explainer.](https://github.com/GoogleChrome/ip-protection/blob/master/Explainer-IP-Geolocation.md)
+
+### Availability 
+Chrome will initially launch IP Protection as an user opt-in setting for users in specific regions, understanding that this could be a significant change for how some companies rely on IP addresses, and seeking to minimize disruption as the ecosystem adjusts. We plan to initially deploy IP Protection to Chrome on Android and Desktop platforms. It will be possible for users and enterprise-managed versions of Chrome to disable IP Protection.
 
 ### Longer term
 Long term solutions will evolve and will be shaped in conjunction with the ecosystem.
 We will collaborate with ISPs, CDNs, third parties, and destination sites towards the end-state of privacy proxies for the web. For instance, ISPs and CDNs are well suited to operate privacy proxies.
 
-As IP Protection evolves, we believe policy will have a part in the overall solution to address circumvention by websites. When needed, we'll develop the policy and seek input from the ecosystem. Our intent for a policy within the proposal will be to encourage web services to be accountable for the usage and sharing of client IP addresses given the sensitivity of IP as an identifying data point. By creating  transparency around the use of IP addresses, we hope to promote industry accountability regarding how IP addresses are accessed and used in the web ecosystem.
+As IP Protection evolves, we believe policy will have a part in the overall solution to address circumvention by websites. As we move forward with the Privacy Sandbox project, we'll develop the policy and seek input from the ecosystem. Our intent for a policy within the proposal will be to encourage web services to be accountable for the usage and sharing of client IP addresses, given the sensitivity of IP as an identifying data point. By creating transparency around the use of IP addresses, we hope to promote industry accountability for how IP addresses are accessed and used in the web ecosystem.
 
 We welcome feedback on this proposal, especially with regard to some of the open questions we are considering.
 
