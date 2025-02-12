@@ -384,7 +384,6 @@ edgesuite.net                                    | Akamai
 go-mpulse.net                                    | Akamai
 imiclk.com                                       | Akamai
 techlab-cdn.com                                  | Akamai
-funcaptcha.com                                   | AkroseLabs
 albacross.com                                    | Albacross
 websitealive.com                                 | Alive5
 websitealive0.com                                | Alive5
@@ -619,7 +618,6 @@ ybrantdigital.com                                | Brightcom
 brightcove.com                                   | Brightcove
 zencdn.net                                       | Brightcove
 browser-update.org                               | Browser-Update.org
-browseranalytic.com                              | BrowserAnalytic
 browsiprod.com                                   | Browsi
 bubblestat.com                                   | Bubblestat
 bucksense.com                                    | BuckSense
@@ -783,7 +781,6 @@ quitzon.net                                      | ClickFrog
 reichelcormier.bid                               | ClickFrog
 wisokykulas.bid                                  | ClickFrog
 conversiondashboard.com                          | ClickFuel
-clickguard.com                                   | ClickGuard
 clickinc.com                                     | ClickInc
 clicktripz.com                                   | ClickTripz
 clickyab.com                                     | Clickayab
@@ -907,8 +904,6 @@ datadoghq-browser-agent.com                      | DataDog
 datadoghq.com                                    | DataDog
 datadoghq.eu                                     | DataDog
 datamind.ru                                      | DataMind.ru
-captcha-delivery.com                             | Datadome
-datadome.co                                      | Datadome
 collserve.com                                    | Dataium
 dataium.com                                      | Dataium
 datonics.com                                     | Datonics
@@ -1138,7 +1133,6 @@ gamned.com                                       | Gamned
 pointroll.com                                    | Gannett
 reachlocal.com                                   | Gannett
 rlcdn.net                                        | Gannett
-geetest.com                                      | GeeTest
 static.geetest.com                               | GeeTest
 geistm.com                                       | Geistm
 adocean-global.com                               | Gemius
@@ -1393,7 +1387,6 @@ gstatic.com                                      | Google
 invitemedia.com                                  | Google
 merchant-center-analytics.goog                   | Google
 postrank.com                                     | Google
-recaptcha.net                                    | Google
 teracent.com                                     | Google
 teracent.net                                     | Google
 youtube-nocookie.com                             | Google
@@ -1453,14 +1446,6 @@ hubapi.com                                       | HubSpot
 hubspot.com                                      | HubSpot
 hubspotemail.net                                 | HubSpot
 usemessages.com                                  | HubSpot
-adxyield.com                                     | HumanSecurity
-adzmath.com                                      | HumanSecurity
-clean.gg                                         | HumanSecurity
-perimeterx.com                                   | HumanSecurity
-perimeterx.net                                   | HumanSecurity
-px-cdn.net                                       | HumanSecurity
-px-cloud.net                                     | HumanSecurity
-whiteops.com                                     | HumanSecurity
 hunter.io                                        | Hunter
 mltrk.io                                         | Hunter
 hurra.com                                        | Hurra.com
@@ -1549,7 +1534,6 @@ ibpxl.com                                        | Internet Brands
 internetbrands.com                               | Internet Brands
 interpolls.com                                   | Interpolls
 im-apps.net                                      | IntimateMerger
-hcaptcha.com                                     | IntuitionMachines
 inuvo.com                                        | Inuvo
 netseer.com                                      | Inuvo
 investingchannel.com                             | InvestingChannel
@@ -1942,13 +1926,11 @@ shinobi.jp                                       | NinjaTools
 networkedblogs.com                               | Ninua
 nitropay.com                                     | NitroPay
 s.nitropay.com                                   | NitroPay
-nofraud.com                                      | NoFraud
 noibu.com                                        | Noibu
 noktamedya.com                                   | Nokta
 virgul.com                                       | Nokta
 stackla.com                                      | Nosto
 adleadevent.com                                  | NotifyGroup
-notolytix.com                                    | Noto
 mediavoice.com                                   | Nova
 polarcdn-engine.com                              | Nova
 polarcdn-pentos.com                              | Nova
@@ -2066,7 +2048,6 @@ pntrs.com                                        | Partnerize
 iivt.com                                         | PartyPoker
 pvd.to                                           | Paved
 paypal.com                                       | Paypal
-simility.com                                     | Paypal
 lzjl.com                                         | Paypopup.com
 paypopup.com                                     | Paypopup.com
 pbbl.co                                          | PebblePost
@@ -2372,9 +2353,6 @@ shopifysvc.com                                   | Shopify
 shopzilla.com                                    | Shopzilla
 shorte.st                                        | Shortest
 viralize.tv                                      | ShowHeroes
-sift.com                                         | SiftScience
-siftscience.com                                  | SiftScience
-signifyd.com                                     | Signifyd
 chocolateplatform.com                            | Silverpush
 ivdopia.com                                      | Silverpush
 vdopia.com                                       | Silverpush
@@ -2569,8 +2547,6 @@ aggregateknowledge.com                           | TransUnion
 agkn.com                                         | TransUnion
 brighttag.com                                    | TransUnion
 btstatic.com                                     | TransUnion
-iesnare.com                                      | TransUnion
-iovation.com                                     | TransUnion
 neustar.biz                                      | TransUnion
 thebrighttag.com                                 | TransUnion
 truoptik.com                                     | TransUnion
@@ -2980,8 +2956,6 @@ fuseplatform.net                                 | fuseplatform.net
 gammaplatform.com                                | gammaplatform.com
 htplayground.com                                 | htplayground.com
 mercadopago.com                                  | https://mercadolibre.com
-stripe.com                                       | https://stripe.com
-stripe.network                                   | https://stripe.com
 livechatinc.com                                  | https://text.com
 clmbtech.com                                     | https://timesinternet.in
 wingify.com                                      | https://vwo.com
