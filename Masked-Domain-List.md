@@ -2956,6 +2956,8 @@ fuseplatform.net                                 | fuseplatform.net
 gammaplatform.com                                | gammaplatform.com
 htplayground.com                                 | htplayground.com
 mercadopago.com                                  | https://mercadolibre.com
+stripe.com                                       | https://stripe.com
+stripe.network                                   | https://stripe.com
 livechatinc.com                                  | https://text.com
 clmbtech.com                                     | https://timesinternet.in
 wingify.com                                      | https://vwo.com
