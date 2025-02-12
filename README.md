@@ -1,4 +1,4 @@
-# IP Protection (formerly known as Gnatcatcher)
+# IP Protection
 
 ## Introduction
 
@@ -60,7 +60,6 @@ IP Protection will use a list-based approach to determine which network traffic 
 #### The Masked Domain List Criteria
 We’ve developed the following criteria to identify which domains should be on the Masked Domain List (MDL) and therefore receive masked IP addresses.
 
-<br><br>
 **MDL Inclusion Criteria**
 
 The MDL will be comprised of domains that fulfill the following criteria:
@@ -75,11 +74,10 @@ The MDL will be comprised of domains that fulfill the following criteria:
     - Measuring ad effectiveness
     - Collection of user data for ads, commerce or marketing related activities
 
-  These business purposes have been selected because they indicate a heightened risk that an embedded domain could have a business incentive to collect users’ activity across sites for commercial purposes.
+    These business purposes have been selected because they indicate a heightened risk that an embedded domain could have a business incentive to collect users’ activity across sites for commercial purposes.
 
   OR
   - The domain collects user or device information in a way that appears likely to support re-identification of users or devices across contexts.
-<br><br>
 
 While the criteria should be seen as largely stable and durable, the MDL itself is subject to ongoing evolution and change. This is driven by the refinement of detection mechanisms and the dynamic emergence and disappearance of domains that meet these criteria.
 
@@ -87,7 +85,7 @@ While the criteria should be seen as largely stable and durable, the MDL itself 
 Google has partnered with [Disconnect.me](http://Disconnect.me), a prominent internet privacy leader who also collaborates with other web browsers. Chrome will leverage Disconnect.me to identify domains that align with Chrome’s established criteria. Additionally, Chrome has developed a methodology to identify widely used JavaScript functions that provide consistent outputs from stable and high-entropy web APIs and can therefore be used to construct high entropy probabilistic identifiers. These functions are then detected when they are loaded on websites in a third-party context, resulting in a list of domains that serve scripts with these characteristics that become part of the MDL and are therefore proxied. The detection pipeline that looks for these patterns of API misuse considers all domains, including Google’s own domains.
 
 #### Publication of the Masked Domain List
-The MDL ([initial version](https://docs.google.com/spreadsheets/d/1Ki0pttWaQRqM4w9YgxYDrX8_wb_wX-vttgYjz73eaqc/edit?resourcekey=0-eYkykL1YnjQq5s9lkNgAmg&gid=0#gid=0)) will be hosted on GitHub. Periodically, domains may be added or removed based on the fingerprinting detection system and updates to Disconnect's published list. Chrome will also remove domains that have successfully obtained an appeal. The published MDL will be the latest version used by Chrome.
+The MDL ([initial version](https://github.com/GoogleChrome/ip-protection/blob/master/Masked-Domain-List.md)) will be hosted on GitHub. Periodically, domains may be added or removed based on the fingerprinting detection system and updates to Disconnect's published list. Chrome will also remove domains that have successfully obtained an appeal. The published MDL will be the latest version used by Chrome.
 
 #### Appeals
 We recognize the importance of implementing an appeals process for our list-based approach. Appeals permit companies to make a claim that their domain on the MDL does not meet the inclusion criteria and ought to be removed, thereby allowing that domain to continue to receive users' original IP addresses in a third-party context in Incognito. Before launching IP Protection, we will establish the appeals process to ensure companies have adequate opportunity to seek an appeal and receive a decision. The appeals process is being designed to align with governance principles for Privacy Sandbox under discussion with the UK’s Competition and Markets Authority ([see CMA's 2024 Q3 report](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#q2q3-2024)).
