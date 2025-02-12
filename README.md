@@ -111,18 +111,18 @@ Chrome recognizes that fighting fraud and spam is critical to keeping a healthy 
 
 Internet proxies provide users with increased anonymity online. For this same reason, proxies are useful to potential attackers that want to conceal their activities, such as executing a Denial-Of-Service (DOS) attack. Proxy defensibility measures are the set of tactics that IP Protection will employ to decrease the risk of our proxies being leveraged by potential attackers and they include:
 
-  A. Rate-limiting access to the proxies<br>
-  B. Limiting issuance of authentication tokens<br>
-  C. Reporting of fraudulent behavior<br>
-  D. Probabilistic Reveal Tokens<br>
+  1. Rate-limiting access to the proxies<br>
+  2. Limiting issuance of authentication tokens<br>
+  3. Reporting of fraudulent behavior<br>
+  4. Probabilistic Reveal Tokens<br>
 
-**A. Rate-limiting access to the proxies**
+**1. Rate-limiting access to the proxies**
 
 IP Protection will use client authentication to limit the ability of bad actors to leverage the proxies to amplify attacks on services on the Masked Domain List. Therefore, IP Protection will only be available to users that have been authenticated using the Google account they're signed in with in the Chrome browser prior to opening a new Incognito window.
 
 It's important to note that, unlike a majority of services that use authentication, IP Protection does it in a way that prevents any collection of data about that user's activity tied to their account as a result of their use of the feature. To achieve this, Chrome will employ an [RSA blind signature scheme](https://datatracker.ietf.org/doc/html/draft-amjad-cfrg-partially-blind-rsa-01). This design ensures that the proxies cannot link the traffic that they're handling to a user's account, neither the one operated by Google nor the one operated by the CDN.
 
-**B. Limiting issuance of authentication tokens**
+**2. Limiting issuance of authentication tokens**
 
 Since tokens are blinded to prevent linkability back to a client, it is theoretically possible to transfer tokens to different clients or use tokens to appear as multiple indistinguishable clients. To limit token transfer or harvesting, there will be a maximum quota of tokens issued per user per day and tokens will be relatively short-lived. Additionally, proxies will limit how much network traffic can be generated per token.
 
@@ -130,13 +130,13 @@ IP Protection will aim to provide most users with a sufficient number of tokens 
 
 In the event a user has no tokens, the requests to domains in the MDL will be routed directly, without proxying. Token quotas may change over time in response to reported or observed patterns of fraudulent activity.
 
-**C. Reporting of fraudulent behavior**
+**3. Reporting of fraudulent behavior**
 
 In addition to preventative measures, we will provide a way for websites to report DoS or other fraudulent behavior.
 
 Defensibility is a constant need and an ever-changing landscape as threats evolve. We expect to remain vigilant and evolve our tactics as necessary to limit fraud and spam through the IP proxies. 
 
-**D. Probabilistic Reveal Tokens**
+**4. Probabilistic Reveal Tokens**
 
 As an additional measure to ensure businesses can monitor the amount of fraud on their systems, respond to emerging fraudulent behavior, and provide feedback on future design iterations, we will add a delayed mechanism to access a random sample of IP addresses called **Probabilistic Reveal Tokens (PRT)**. PRTs will be included on proxied requests in a new HTTP header added by Chrome for domains that enable PRTs. This PRT can, after a delay, be decrypted using a key issued by Google. The PRT will contain the non-proxy IP in a small percent of tokens issued. This PRT will be rotated for each new first-party load within a given incognito session. We will publish more detailed information on PRTs at a future time.
 
