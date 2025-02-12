@@ -65,7 +65,7 @@ We’ve developed the following criteria to identify which domains should be on 
 
 The MDL will be comprised of domains that fulfill the following criteria:
 
-  The domain is embedded as a third-party domain and therefore in a position to collect information about a user or their device across multiple sites that aren’t owned by the data collector (see below for how we plan to identify ownership).
+  **The domain is embedded as a third-party domain** and therefore in a position to collect information about a user or their device across multiple sites that aren’t owned by the data collector ([see below for how we plan to identify ownership](#first-party-vs-third-party-determination)).
 
   In addition, the domain also meets at least one of the following criteria:
 
