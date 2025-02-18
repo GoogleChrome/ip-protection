@@ -100,27 +100,28 @@ For example, consider an analytics company that operates a domain named “B”.
   2. A user navigates to domain “B” (either by typing the domain directly into the browser or by navigating through a link). In this case, B will be able to observe the user’s original IP address, instead of the proxied IP address.
   3. Domain “B” loads in another top level domain (e.g. domain “C”) that belongs to the same Related Website Set. B will continue to receive the user's original IP address.
 
-<style>
-.grid-container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-}
-</style>
-<div class="grid-container">
-  <figure>
-    <img src="./images/mdl-one.png" alt="A figure showing Site A embedding Site B">
-    <figcaption>Site B is on the MDL and receives a masked IP</figcaption>
-  </figure>
-  <figure>
-    <img src="./images/mdl-two.png" alt="A figure showing Site B as the top-level site">
-    <figcaption>Site B loads in a 1P context, gets the user's original IP</figcaption>
-  </figure>
-  <figure>
-    <img src="./images/mdl-three.png" alt="A figure showing Site C embedding Site B">
-    <figcaption>Site C &amp; B are part of a RWS, Site B gets the original IP</figcaption>
-  <figure>
-</div>
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="./images/mdl-one.png" alt="A figure showing Site A embedding Site B">
+        <figcaption>Site B is on the MDL and receives a masked IP</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="./images/mdl-two.png" alt="A figure showing Site B as the top-level site">
+        <figcaption>Site B loads in a 1P context, gets the user's original IP</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="./images/mdl-three.png" alt="A figure showing Site C embedding Site B">
+        <figcaption>Site C &amp; B are part of a RWS, Site B gets the original IP</figcaption>
+      <figure>
+    </td>
+  </tr>
+</table>
 
 Similar to how browsers handle third-party cookie blocking, IP Protection considers all subdomains of a [registrable domain](https://web.dev/articles/url-parts#registrable-domain) on the MDL as part of the same domain and will therefore also receive the same treatment. Additionally, any subdomains under domains in the [private section of the Public Suffix List](https://publicsuffix.org/list/public_suffix_list.dat#:~:text=//%20%3D%3D%3DBEGIN%20PRIVATE%20DOMAINS%3D%3D%3D) would be considered third-party to each other unless they are in the same RWS; since such a domain would become an "eTLD", and hence each subdomain is considered its own registrable domain. RWS will be honored for IP Protection in Incognito independent of whether RWS is applicable to third-party cookie blocking in Incognito.
 
