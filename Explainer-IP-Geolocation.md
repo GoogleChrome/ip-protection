@@ -18,7 +18,7 @@ Each geographic area is represented in the geofeed by its most populous city. We
 
 Note that the assigned IP geolocation for a user would maintain country borders to our best knowledge based on the user’s original IP. For example, a user that appears in Windsor (Canada) according to their original IP address would not be assigned to Detroit (US), despite the geographical proximity. This rule applies for all countries, including those that may have a total population below the established threshold.
 
-!["The map is subdivided into areas delimited by the blue boundaries in the US and green boundaries in Canada. Users within a certain area will be assigned an IP address that is mapped to the top city of that area, marked with the pin. An area will never cross a country border."](./geo-example.png)
+!["The map is subdivided into areas delimited by the blue boundaries in the US and green boundaries in Canada. Users within a certain area will be assigned an IP address that is mapped to the top city of that area, marked with the pin. An area will never cross a country border."](./images/geo-example.png)
 
 _Image 1. Illustrative mapping of Detroit area. The image shows how country boundaries with Canada are preserved while also indicating unique Geos for certain regions._
 
