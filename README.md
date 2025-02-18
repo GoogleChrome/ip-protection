@@ -4,9 +4,9 @@
 
 IP Protection is a feature that limits availability of a user’s original IP address in third party contexts in Incognito mode, enhancing Incognito's protections against cross-site tracking when users choose to browse in this mode.
 
-IP addresses are essential to the basic functioning of the web, notably for routing traffic and to prevent fraud and spam. However, like third-party cookies, they can also be used for tracking. For Chrome users who choose to browse in Incognito mode, we wanted to provide additional control over their IP address, without breaking essential web functionality.  
+IP addresses are essential to the basic functioning of the web, notably for routing traffic and to prevent fraud and spam. However, like third-party cookies, they can also be used for tracking. For Chrome users who choose to browse in Incognito mode, we wanted to provide additional control over their IP address, without breaking essential web functionality.
 
-To strike this balance between protection and usability, this proposal focuses on limiting the use of IP addresses in a third-party context. To that end, this proposal uses a list-based approach, where only domains on the masked domain list (MDL) in a third-party context will be impacted. 
+To strike this balance between protection and usability, this proposal focuses on limiting the use of IP addresses in a third-party context. To that end, this proposal uses a list-based approach, where only domains on the masked domain list (MDL) in a third-party context will be impacted.
 
 As mentioned, the scope of this proposal is limited to Chrome’s Incognito mode.
 
@@ -38,7 +38,7 @@ Chrome is taking the following steps to prevent user identifiers, including IP a
 
 - IP Protection will use CONNECT and CONNECT-UDP (MASQUE) to forward traffic. There is an end-to-end encrypted tunnel via TLS or QUIC from Chrome to the destination server. Separate connections will use different IP addresses from the proxies.
 
-- We are using two proxies for improved privacy. A second proxy (proxyB) will be run by an external CDN, while Google runs the first proxy (proxyA). We then leverage two additional layers of HTTPS encryption, one at each proxy, to ensure that neither proxy can see both the client IP address and the destination. The two additional layers of encryption are from the QUIC proxy tunnels that Chrome uses to connect through each proxy server. When the request supports HTTPS the flow is the following: There is an encrypted QUIC tunnel between the client and proxyA; through it, there is another QUIC tunnel between the client and proxy B; through that tunnel, there is an end-to-end HTTPS connection between the client and the website, protected by QUIC or TLS. This end-to-end encryption prevents both proxies from seeing any browsing contents including the destination URL. The client-proxyB encryption prevents the proxyA from seeing the hostname of the website. The proxyB cannot see the IP address of the client because, from its perspective, all client traffic is coming from the proxyA. These nested tunnels are established using CONNECT and CONNECT-UDP. Both sets of proxies are run close to users to minimize latency to the user. 
+- We are using two proxies for improved privacy. A second proxy (proxyB) will be run by an external CDN, while Google runs the first proxy (proxyA). We then leverage two additional layers of HTTPS encryption, one at each proxy, to ensure that neither proxy can see both the client IP address and the destination. The two additional layers of encryption are from the QUIC proxy tunnels that Chrome uses to connect through each proxy server. When the request supports HTTPS the flow is the following: There is an encrypted QUIC tunnel between the client and proxyA; through it, there is another QUIC tunnel between the client and proxy B; through that tunnel, there is an end-to-end HTTPS connection between the client and the website, protected by QUIC or TLS. This end-to-end encryption prevents both proxies from seeing any browsing contents including the destination URL. The client-proxyB encryption prevents the proxyA from seeing the hostname of the website. The proxyB cannot see the IP address of the client because, from its perspective, all client traffic is coming from the proxyA. These nested tunnels are established using CONNECT and CONNECT-UDP. Both sets of proxies are run close to users to minimize latency to the user.
 
 - Chrome will employ an [RSA blind signature scheme](https://datatracker.ietf.org/doc/draft-hendrickson-privacypass-public-metadata/) between client authentication and proxy usage to isolate client identity from all proxy servers. This will include open source bounds on what metadata is shared with proxies during this authentication process. This metadata is used to provide the information that is necessary for the basic operation of the proxy B, which includes: (i) approximate token expiration to detect expired tokens and, (ii) IP Geolocation to assign the appropriate egress IP. Chrome is committed to ensuring a user cannot be uniquely identified via their unblinded token or associated authentication metadata.
 
@@ -100,14 +100,34 @@ For example, consider an analytics company that operates a domain named “B”.
   2. A user navigates to domain “B” (either by typing the domain directly into the browser or by navigating through a link). In this case, B will be able to observe the user’s original IP address, instead of the proxied IP address.
   3. Domain “B” loads in another top level domain (e.g. domain “C”) that belongs to the same Related Website Set. B will continue to receive the user's original IP address.
 
-![Three side‐by‐side diagrams illustrate how “Site B” receives either a masked or original IP address depending on the context: Left diagram (light gray): “Site A” embeds “Site B.” Because B is on the masked domain list (MDL) and is loaded in a third‐party context, it only sees a masked IP. Center diagram (light yellow): “Site B” as a first‐party site sees the user’s original IP Right diagram (darker yellow): “Site C” embeds “Site B.” Both are in the same Related Website Set (RWS), so “Site B” gets the original IP.](./ipp-mdl-example.png)
+<style>
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+</style>
+<div class="grid-container">
+  <figure>
+    <img src="./images/mdl-one.png" alt="A figure showing Site A embedding Site B">
+    <figcaption>Site B is on the MDL and receives a masked IP</figcaption>
+  </figure>
+  <figure>
+    <img src="./images/mdl-two.png" alt="A figure showing Site B as the top-level site">
+    <figcaption>Site B loads in a 1P context, gets the user's original IP</figcaption>
+  </figure>
+  <figure>
+    <img src="./images/mdl-three.png" alt="A figure showing Site C embedding Site B">
+    <figcaption>Site C &amp; B are part of a RWS, Site B gets the original IP</figcaption>
+  <figure>
+</div>
 
 Similar to how browsers handle third-party cookie blocking, IP Protection considers all subdomains of a [registrable domain](https://web.dev/articles/url-parts#registrable-domain) on the MDL as part of the same domain and will therefore also receive the same treatment. Additionally, any subdomains under domains in the [private section of the Public Suffix List](https://publicsuffix.org/list/public_suffix_list.dat#:~:text=//%20%3D%3D%3DBEGIN%20PRIVATE%20DOMAINS%3D%3D%3D) would be considered third-party to each other unless they are in the same RWS; since such a domain would become an "eTLD", and hence each subdomain is considered its own registrable domain. RWS will be honored for IP Protection in Incognito independent of whether RWS is applicable to third-party cookie blocking in Incognito.
 
-To reduce potential disruptions to websites and services, until companies create Related Website Sets, Chrome will temporarily employ a best effort approach to deduce domain ownership leveraging an entity mapping created by [Disconnect.me](http://Disconnect.me). Additionally, in cases where a company has not previously submitted a RWS and our deduced approach contains errors, the company has the option to submit a RWS to rectify any necessary corrections. 
+To reduce potential disruptions to websites and services, until companies create Related Website Sets, Chrome will temporarily employ a best effort approach to deduce domain ownership leveraging an entity mapping created by [Disconnect.me](https://Disconnect.me). Additionally, in cases where a company has not previously submitted a RWS and our deduced approach contains errors, the company has the option to submit a RWS to rectify any necessary corrections.
 
 ### Anti-Fraud and Anti-Spam Strategy and Implementation
-Chrome recognizes that fighting fraud and spam is critical to keeping a healthy and safe online ecosystem for users, publishers and advertisers, and that, today, IP addresses play a critical role in accomplishing this, whether it is preventing fraudulent commercial transactions or spam at scale. 
+Chrome recognizes that fighting fraud and spam is critical to keeping a healthy and safe online ecosystem for users, publishers and advertisers, and that, today, IP addresses play a critical role in accomplishing this, whether it is preventing fraudulent commercial transactions or spam at scale.
 
 Internet proxies provide users with increased anonymity online. For this same reason, proxies are useful to potential attackers that want to conceal their activities, such as executing a Denial-Of-Service (DOS) attack. Proxy defensibility measures are the set of tactics that IP Protection will employ to decrease the risk of our proxies being leveraged by potential attackers and they include:
 
@@ -134,7 +154,7 @@ In the event a user has no tokens, the requests to domains in the MDL will be ro
 
 In addition to preventative measures, we will provide a way for websites to report DoS or other fraudulent behavior.
 
-Defensibility is a constant need and an ever-changing landscape as threats evolve. We expect to remain vigilant and evolve our tactics as necessary to limit fraud and spam through the IP proxies. 
+Defensibility is a constant need and an ever-changing landscape as threats evolve. We expect to remain vigilant and evolve our tactics as necessary to limit fraud and spam through the IP proxies.
 
 **4. Probabilistic Reveal Tokens**
 
