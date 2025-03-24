@@ -8,7 +8,7 @@ It’s worth noting that IP geolocation—with or without IP Protection—only p
 
 ## How IP geolocation information will be shared
 
-Geo assignments of the IP addresses exposed by IP Protection will be shared publicly via a geofeed file. An example of what this file will look like can be found at [this link](https://www.gstatic.com/ipprotection/geofeed_template). The geofeed will use the format defined in [[RFC 8805](https://datatracker.ietf.org/doc/html/rfc8805)], and will provide city-level mappings. These city-level mappings correspond to top cities, each representing a geographic area around that city.
+Geo assignments of the IP addresses exposed by IP Protection are shared publicly via a geofeed file. Our geofeed can be found [here](https://www.gstatic.com/ipprotection/geofeed). The geofeed uses the format defined in [[RFC 8805](https://datatracker.ietf.org/doc/html/rfc8805)], and provides city-level mappings. These city-level mappings correspond to top cities, each representing a geographic area around that city.
 
 ## Defining and Dividing Geographies
 
