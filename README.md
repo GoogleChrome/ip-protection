@@ -52,7 +52,8 @@ To accomplish this, Google will purchase IPv4 and IPv6 blocks, and defer BGP con
 ### Availability of the IP Protection feature
 IP Protection will be available for users in Chrome’s Incognito mode only, on Android and Desktop platforms. Users will have the ability to disable IP Protection. For enterprise-managed versions of Chrome, IP Protection can be enabled, but it will be off by default.
 
-The feature will be initially available in certain regions, and we plan to expand the availability over time. IP Protection will launch no sooner than May 2025.
+The feature will be initially available in certain regions, and we plan to expand the availability
+over time. IP Protection will launch to Chrome Stable no sooner than July 2025.
 
 ### Identifying domains and the Masked Domain List (MDL)
 IP Protection will use a list-based approach to determine which network traffic should be proxied. Domains that are on the list will be proxied when they appear in a third-party context (for example if the domain is embedded within another website). If that domain is accessed in a first-party context it will receive the original unmasked IP address. Domains that are not on the list will be unaffected in either third- or first-party contexts. This applies equally to Google-owned and non-Google-owned domains.
@@ -87,8 +88,52 @@ Google has partnered with [Disconnect.me](https://Disconnect.me), a prominent in
 #### Publication of the Masked Domain List
 The MDL ([initial version](https://github.com/GoogleChrome/ip-protection/blob/main/Masked-Domain-List.md)) will be hosted on GitHub. Periodically, domains may be added or removed based on the fingerprinting detection system and updates to Disconnect's published list. Chrome will also remove domains that have successfully obtained an appeal. The published MDL will be the latest version used by Chrome.
 
+For general inquiries about the MDL, such as those regarding domain inclusions, exclusions or
+updates, please contact <a href="mailto:mdl_inquiries@disconnect.me">mdl_inquiries@disconnect.me</a>.
+Please note that response times for general inquiries may not adhere to the
+<a href="#policies-and-timelines">timelines listed for appeals</a>.
+
 #### Appeals
-We recognize the importance of implementing an appeals process for our list-based approach. Appeals permit companies to make a claim that their domain on the MDL does not meet the inclusion criteria and ought to be removed, thereby allowing that domain to continue to receive users' original IP addresses in a third-party context in Incognito. Before launching IP Protection, we will establish the appeals process to ensure companies have adequate opportunity to seek an appeal and receive a decision. The appeals process is being designed to align with governance principles for Privacy Sandbox under discussion with the UK’s Competition and Markets Authority ([see CMA's 2024 Q3 report](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#q2q3-2024)).
+We recognize the importance of implementing an appeals process for our list-based approach. Appeals
+permit companies to make a claim that their domain on the MDL does not meet the inclusion criteria
+and ought to be removed, thereby allowing that domain to continue to receive users' original IP
+addresses in a third-party context in Incognito. Before launching IP Protection, we will establish
+the appeals process to ensure companies have adequate opportunity to seek an appeal and receive a
+decision.
+
+The appeals process will be available starting **April 15th, 2025** to provide domain owners
+sufficient time to seek an appeal and receive a decision prior to the launch of IP Protection in
+Incognito in Chrome Stable.
+
+<a href="https://Disconnect.me">Disconnect.me</a> will independently manage and operate the appeals
+process for the MDL. All <a href="https://Disconnect.me">Disconnect.me</a> decisions regarding a
+domain's appeal are based solely on the MDL criteria outlined in this document.
+
+Domain owners who wish to submit an appeal should send an email to
+<a href="mailto:mdl_inquiries@disconnect.me">mdl_inquiries@disconnect.me</a>. The email should
+include the following information:
+
+* The domain name subject to the appeal.
+* Company name and contact information for the domain owner.
+* An explanation of why the domain does not meet the
+  <a href="#the-masked-domain-list-criteria">MDL inclusion criteria.</a>
+
+<span id="policies-and-timelines">Domain owners can expect the following policies and timelines to
+apply to the appeals process:</span>
+
+* Appeals must be submitted by the domain owner.
+* Disconnect.me will aim to provide a decision on each appeal within **10 business days** from the
+  initial appeal request.
+  * If Disconnect.me requires additional information from the domain owner and does not receive a
+    response within **10 business days**, the appeal may be closed.
+  * If an appeal is closed due to insufficient information, the domain owner may resubmit an appeal
+    request.
+* If an appeal is closed with rationale, the domain will not be eligible for re-evaluation for a
+  period of **60 days** from the date of the denial.
+
+The appeals process is being designed to align with governance principles for Privacy Sandbox under
+discussion with the UK’s Competition and Markets Authority
+([see CMA's 2024 Q3 report](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#q2q3-2024)).
 
 #### First-party vs Third-party determination
 IP Protection will apply to the domains on the MDL only when accessed in a third-party context in Incognito, thus we must have a mechanism to determine what is first-party and what is third-party on a contextual basis.  If the domain for a resource on a page matches the top level domain, that will be considered first-party context, even if the domain itself is on the MDL.  However, simply using domain structures is insufficient as a mismatch does not inherently mean the context is third-party. Websites are often constructed using a modular approach, where various resources are provided by different domains, even if they are operated by the same company. While masking IP addresses across multiple domains enhances user privacy, it offers limited privacy gain when those domains are service domains under common ownership or, to a certain extent, if they have an affiliation that is clearly presented to users. Additionally, it imposes an unnecessary burden for web developers operating such websites. As such, Privacy Sandbox needs to provide some model that reduces the burden where reasonable to do so.
