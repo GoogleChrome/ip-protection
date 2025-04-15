@@ -13,6 +13,26 @@ Disclaimer: Google isn't responsible for the contents of the domains and the
 associated websites, and will follow existing takedown protocols when removing
 entries.
 
+## MDL Appeals
+
+Disconnect evaluates domains for inclusion in Google’s Masked Domain List (MDL).
+The MDL is dynamic; domain owners can send an email to
+mdl_evaluations@disconnect.me if they believe that their domain has been
+incorrectly included.
+
+### Evaluation guidelines
+
+All decisions about a domain’s inclusion are based on the MDL criteria found
+[here](https://github.com/GoogleChrome/ip-protection/blob/main/README.md#the-masked-domain-list-criteria). Please note, Disconnect’s evaluations consider only publicly available
+materials and technical information. Email submissions should detail how the
+publicly available information you submit indicates the domain does not meet the
+MDL criteria.
+
+## General inquiries
+
+For general inquiries about the MDL, such as those regarding domain inclusions, exclusions or updates, please contact mdl_inquiries@disconnect.me. Please note that response times for general inquiries may not adhere to the
+[timelines listed for appeals](https://github.com/GoogleChrome/ip-protection/blob/main/README.md#appeals).
+
 Domain                                           | Owner
 ------------------------------------------------ | -----
 10web.io                                         | 10Web
@@ -4801,3 +4821,4 @@ xdiwbc.com                                       |
 you4cdn.com                                      |
 yummy.maggieeatstheangel.com                     |
 z0000g.yvmads.com                                |
+
