@@ -89,34 +89,30 @@ Google has partnered with [Disconnect.me](https://Disconnect.me), a prominent in
 The MDL ([initial version](https://github.com/GoogleChrome/ip-protection/blob/main/Masked-Domain-List.md)) will be hosted on GitHub. Periodically, domains may be added or removed based on the fingerprinting detection system and updates to Disconnect's published list. Chrome will also remove domains that have successfully obtained an appeal. The published MDL will be the latest version used by Chrome.
 
 For general inquiries about the MDL, such as those regarding domain inclusions, exclusions or
-updates, please contact <a href="mailto:mdl_inquiries@disconnect.me">mdl_inquiries@disconnect.me</a>.
-Please note that response times for general inquiries may not adhere to the
-<a href="#policies-and-timelines">timelines listed for appeals</a>.
+updates, please contact mdl_inquiries@disconnect.me. Please note that response times for general
+inquiries may not adhere to the [timelines listed for appeals](#policies-and-timelines).
 
 #### Appeals
 We recognize the importance of implementing an appeals process for our list-based approach. Appeals
 permit companies to make a claim that their domain on the MDL does not meet the inclusion criteria
 and ought to be removed, thereby allowing that domain to continue to receive users' original IP
-addresses in a third-party context in Incognito. Before launching IP Protection, we will establish
-the appeals process to ensure companies have adequate opportunity to seek an appeal and receive a
-decision.
+addresses in a third-party context in Incognito.
 
-The appeals process will be available starting **April 15th, 2025** to provide domain owners
+The appeals process is available now (as of **April 15th, 2025**) to provide domain owners
 sufficient time to seek an appeal and receive a decision prior to the launch of IP Protection in
 Incognito in Chrome Stable.
 
-<a href="https://Disconnect.me">Disconnect.me</a> will independently manage and operate the appeals
-process for the MDL. All <a href="https://Disconnect.me">Disconnect.me</a> decisions regarding a
+[Disconnect.me](https://Disconnect.me) will independently manage and operate the appeals
+process for the MDL. All [Disconnect.me](https://Disconnect.me) decisions regarding a
 domain's appeal are based solely on the MDL criteria outlined in this document.
 
-Domain owners who wish to submit an appeal should send an email to
-<a href="mailto:mdl_inquiries@disconnect.me">mdl_inquiries@disconnect.me</a>. The email should
-include the following information:
+Domain owners who wish to submit an appeal should send an email to mdl_inquiries@disconnect.me.
+The email should include the following information:
 
 * The domain name subject to the appeal.
 * Company name and contact information for the domain owner.
 * An explanation of why the domain does not meet the
-  <a href="#the-masked-domain-list-criteria">MDL inclusion criteria.</a>
+  [MDL inclusion criteria](#the-masked-domain-list-criteria).
 
 <span id="policies-and-timelines">Domain owners can expect the following policies and timelines to
 apply to the appeals process:</span>
@@ -131,7 +127,7 @@ apply to the appeals process:</span>
 * If an appeal is closed with rationale, the domain will not be eligible for re-evaluation for a
   period of **60 days** from the date of the denial.
 
-The appeals process is being designed to align with governance principles for Privacy Sandbox under
+The appeals process has been designed to align with governance principles for Privacy Sandbox under
 discussion with the UK’s Competition and Markets Authority
 ([see CMA's 2024 Q3 report](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#q2q3-2024)).
 
