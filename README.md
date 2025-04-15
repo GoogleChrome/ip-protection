@@ -106,7 +106,7 @@ Incognito in Chrome Stable.
 process for the MDL. All [Disconnect.me](https://Disconnect.me) decisions regarding a
 domain's appeal are based solely on the MDL criteria outlined in this document.
 
-Domain owners who wish to submit an appeal should send an email to mdl_inquiries@disconnect.me.
+Domain owners who wish to submit an appeal should send an email to mdl_evaluations@disconnect.me.
 The email should include the following information:
 
 * The domain name subject to the appeal.
