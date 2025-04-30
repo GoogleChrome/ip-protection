@@ -141,7 +141,8 @@ or the PRT is expired, the client randomly picks a PRT from pre-fetched PRTs,
 re-randomizes it, and associates it with the top level origin. \
 The client includes re-randomized PRTs in the
 [Ip-Protection](https://source.chromium.org/chromium/chromium/src/+/main:net/http/http_network_transaction.cc;drc=1651676a30cd7abcd177975f7cd0e37bd945f663;l=1242)
-header. Values are base64 encoding of
+header. Values are [Structurd Header Byte
+Sequences](https://www.rfc-editor.org/rfc/rfc8941.html#section-3.3.5) and hold a
 [TLS Presentation Language](https://datatracker.ietf.org/doc/html/rfc8446#section-3)
 serialized `PRTStruct` defined below.
 
@@ -157,11 +158,11 @@ struct {
 ```
 
 ```
-Ip-Protection: 1; prt=MWFiY2RlZ...mdoYWI=
+Sec-Probabilistic-Reveal-Token: :AQAhA0YcSOPXwN8JkGJz2Rxe349sEOzwLcXnrU0/e5P1QUEEACECjvPnzEReeDlIkrDocZA5ZtiIptiG02YOOaNMJKyKZTdIXbE63QJtYA==:
 ```
 
 If there are no valid PRTs to attach when composing a proxied request,
-the client will make the proxied request without a `prt` in the header. A
+the client will make the proxied request without the header. A
 well-behaved client should only fail to attach a PRT in exceptional
 circumstances, e.g. Issuer unavailability. As the lack of an attached PRT will
 not prevent a request from being proxied, the volume of exceptional
@@ -197,7 +198,7 @@ For more technical information on PRT tokens, [please see here](https://github.c
 ### Requesting access
 
 By default, PRTs are not included on proxied requests. Organizations on the MDL
-must sign up to receive PRTs in the header as part of the proxied requests using
+must sign up to receive the header as part of the proxied requests using
 a forthcoming form. Google will verify that the domain is on the MDL, but will
 otherwise not restrict any organization that signs up to receive the tokens.
 
