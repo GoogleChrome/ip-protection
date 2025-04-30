@@ -140,8 +140,8 @@ attached to the request. If there is no PRT associated with the top level site
 or the PRT is expired, the client randomly picks a PRT from pre-fetched PRTs,
 re-randomizes it, and associates it with the top level origin. \
 The client includes re-randomized PRTs in the
-[Ip-Protection](https://source.chromium.org/chromium/chromium/src/+/main:net/http/http_network_transaction.cc;drc=1651676a30cd7abcd177975f7cd0e37bd945f663;l=1242)
-header. Values are [Structurd Header Byte
+[Sec-Probabilistic-Reveal-Token](https://source.chromium.org/chromium/chromium/src/+/main:net/http/http_network_transaction.cc;drc=0302427cb7d80ae6b980f50ae7eb5801bde36004;l=1298)
+header. Values are [Structured Header Byte
 Sequences](https://www.rfc-editor.org/rfc/rfc8941.html#section-3.3.5) and hold a
 [TLS Presentation Language](https://datatracker.ietf.org/doc/html/rfc8446#section-3)
 serialized `PRTStruct` defined below.
