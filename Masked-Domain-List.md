@@ -4919,7 +4919,6 @@ ex.exnessstats.com                               |
 fb44363438ca.cdn4.forter.com                     |
 files.ascent360.com                              |
 fp.elevar.io                                     |
-github-api.arkoselabs.com                        |
 granlite.com                                     |
 greg.zuulo.xyz                                   |
 gs.nmgassets.com                                 |
