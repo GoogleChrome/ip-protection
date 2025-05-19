@@ -21,14 +21,16 @@ mdl_evaluations@disconnect.me if they believe that their domain has been
 incorrectly included.
 
 ### Evaluation guidelines
+
 All decisions about a domain’s inclusion are based on the MDL criteria found
 [here](https://github.com/GoogleChrome/ip-protection/blob/main/README.md#the-masked-domain-list-criteria).
-Please note, Disconnect’s evaluations consider only publicly available
-materials and technical information. Email submissions should detail how the
-publicly available information you submit indicates the domain does not meet the
-MDL criteria.
+Please note, Disconnect’s evaluations consider only publicly available materials
+and technical information. Email submissions should detail how the publicly
+available information you submit indicates the domain does not meet the MDL
+criteria.
 
 ## General inquiries
+
 For general inquiries about the MDL, such as those regarding domain inclusions,
 exclusions or updates, please contact mdl_evaluations@disconnect.me. Please note
 that response times for general inquiries may not adhere to the
@@ -265,7 +267,6 @@ adbroker.de                                      | AdSpirit
 adspirit.com                                     | AdSpirit
 adspirit.de                                      | AdSpirit
 adspirit.net                                     | AdSpirit
-ad-stir.com                                      | AdStir
 adsugar.ch                                       | AdSugar
 adtelligent.com                                  | AdTelligent
 vertamedia.com                                   | AdTelligent
@@ -1659,6 +1660,7 @@ livefyre.com                                     | Adobe
 marketo.com                                      | Adobe
 marketo.net                                      | Adobe
 mktoresp.com                                     | Adobe
+mktoweb.com                                      | Adobe
 omniture.com                                     | Adobe
 omtrdc.net                                       | Adobe
 scene7.com                                       | Adobe
@@ -1683,6 +1685,7 @@ cdn.tapioni.com                                  | Adspyglass
 adsquare.com                                     | Adsquare
 adsrevenue.net                                   | Adsrevenue.net
 adstanding.com                                   | Adstanding
+alcmpn.com                                       | Adstra
 bluecava.com                                     | Adstra
 4dsply.com                                       | Adsupply
 adsupply.com                                     | Adsupply
@@ -1736,6 +1739,7 @@ aisleahead.com                                   | AisleAhead
 abmr.net                                         | Akamai
 akstat.io                                        | Akamai
 go-mpulse.net                                    | Akamai
+pxlclnmdecom-a.akamaihd.net                      | Akamai
 techlab-cdn.com                                  | Akamai
 albacross.com                                    | Albacross
 cdn.alevco.de                                    | Alevco
@@ -2022,6 +2026,7 @@ branica.com                                      | Branica
 appboycdn.com                                    | Braze
 braze.com                                        | Braze
 breaktime.com.tw                                 | BreakTime
+sibautomation.com                                | Brevo
 scupio.com                                       | Bridgewell
 b0e8.com                                         | BrightEdge
 bc0a.com                                         | BrightEdge
@@ -2049,6 +2054,7 @@ usebutton.com                                    | Button
 buttondown.email                                 | ButtonDown
 beaconads.com                                    | BuySellAds
 buysellads.com                                   | BuySellAds
+buysellads.net                                   | BuySellAds
 carbonads.com                                    | BuySellAds
 yoggrt.com                                       | BuySellAds
 buysight.com                                     | Buysight
@@ -2276,6 +2282,7 @@ conversiondashboard.com                          | ClickFuel
 clickguard.com                                   | ClickGuard
 clickinc.com                                     | ClickInc
 clicktripz.com                                   | ClickTripz
+bncloudfl.com                                    | Clickadu
 clickyab.com                                     | Clickayab
 clickdensity.com                                 | Clickdensity
 clicksor.com                                     | Clicksor
@@ -2359,7 +2366,6 @@ analytics-au.cloud.coveo.com                     | Coveo
 analytics-ca.cloud.coveo.com                     | Coveo
 analytics-eu.cloud.coveo.com                     | Coveo
 analytics.cloud.coveo.com                        | Coveo
-analytics.org.coveo.com                          | Coveo
 analytics.orgdev.coveo.com                       | Coveo
 analytics.orghipaa.coveo.com                     | Coveo
 analytics.orgstg.coveo.com                       | Coveo
@@ -2502,6 +2508,7 @@ doubleverify.com                                 | DoubleVerify
 drift.com                                        | Drift
 driftt.com                                       | Drift
 lookery.com                                      | Drift
+sleeknote.com                                    | Drip Global
 driveniq.com                                     | DrivenIQ
 dstillery.com                                    | Dstillery
 m6d.com                                          | Dstillery
@@ -2522,6 +2529,7 @@ lassocrm.com                                     | ECI
 eqads.com                                        | EQ Ads
 euid.eu                                          | EUiD
 earnify.com                                      | Earnify
+ebxcdn.com                                       | Echobox
 webclicktracker.com                              | EcreativeWorks
 clickability.com                                 | Edgio
 limelight.com                                    | Edgio
@@ -2582,6 +2590,7 @@ eyeviewdigital.com                               | Eyeviewdigital
 ezodn.com                                        | Ezoic
 ezoic.com                                        | Ezoic
 ezoic.net                                        | Ezoic
+ezoiccdn.com                                     | Ezoic
 fanplayr.com                                     | Fanplayr
 fathomdelivers.com                               | Fathom
 fathomseo.com                                    | Fathom
@@ -2605,6 +2614,7 @@ spongecell.com                                   | Flashtalking
 pontiflex.com                                    | FlatIronMedia
 flattr.com                                       | Flattr
 adiquity.com                                     | Flipkart
+flipp.com                                        | Flipp
 flite.com                                        | Flite
 widgetserver.com                                 | Flite
 adingo.jp                                        | Fluct
@@ -2658,6 +2668,9 @@ semasio.net                                      | Fyllo
 gb-world.net                                     | GB-World
 validate.onecount.net                            | GCN Publishing
 geniee.co.jp                                     | GENIEE
+genieesspv.jp                                    | GENIEE
+gsspat.jp                                        | GENIEE
+gsspcln.jp                                       | GENIEE
 gssprt.jp                                        | GENIEE
 gmossp-sp.jp                                     | GMO
 reemo-ad.jp                                      | GMO
@@ -2682,6 +2695,7 @@ genesismedia.com                                 | Genesis Media
 genesismediaus.com                               | Genesis Media
 boldchat.com                                     | Genesys
 geniusmonkey.com                                 | GeniusMonkey
+geniuslinkcdn.com                                | Geniuslink
 geoads.com                                       | GeoAds
 geoedge.be                                       | Geoedge
 getsatisfaction.com                              | Get Satisfaction
@@ -2941,11 +2955,13 @@ groovinads.com                                   | GroovinAds
 onsite.joinground.com                            | Ground
 xad.com                                          | GroundTruth
 guj.de                                           | Gruner + Jahr
+r7.com                                           | Grupo Record
 globo.com                                        | GrupoGlobo
 gumgum.com                                       | GumGum
 justpremium.com                                  | GumGum
 hotwords.com                                     | HOTWords
 hotwords.es                                      | HOTWords
+hprofits.com                                     | HProfits
 huntmads.com                                     | HUNT Mobile Ads
 hrcdn.net                                        | Hacker Rank
 haloscan.com                                     | Haloscan
@@ -3045,6 +3061,7 @@ improvedigital.com                               | Improve Digital
 ninthdecimal.com                                 | InMarket
 aerserv.com                                      | InMobi
 inmobi.com                                       | InMobi
+inmobiapis.com                                   | InMobi
 inmobicdn.net                                    | InMobi
 sproutinc.com                                    | InMobi
 adotsolution.com                                 | Incross
@@ -3124,6 +3141,7 @@ s1.kwai.net                                      | Joyo
 judge.me                                         | Judge
 jads.co                                          | JuicyAds
 juicyads.com                                     | JuicyAds
+juicyads.me                                      | JuicyAds
 score.juicyscore.com                             | JuicyScore
 websites.getjusto.com                            | Justo
 kitd.com                                         | KIT digital
@@ -3401,6 +3419,7 @@ msads.net                                        | Microsoft
 msn.com                                          | Microsoft
 nuance.com                                       | Microsoft
 officelive.com                                   | Microsoft
+oribi.io                                         | Microsoft
 skype.com                                        | Microsoft
 touchcommerce.com                                | Microsoft
 visualstudio.com                                 | Microsoft
@@ -3559,6 +3578,7 @@ olark.com                                        | Olark
 accuenmedia.com                                  | Omnicom Group
 omnicomgroup.com                                 | Omnicom Group
 omnisnippet1.com                                 | Omnisend
+soundestlink.com                                 | Omnisend
 behavioralengine.com                             | OnAudience
 onaudience.com                                   | OnAudience
 assets.livecamcdn.com                            | OnCam
@@ -3829,7 +3849,7 @@ rambler.ru                                       | Rambler
 lahar.com.br                                     | Ramper
 adthrive.com                                     | Raptive
 slickstream.com                                  | Raptive
-opens.responder.co.il                            | RavMesserLtd
+adara.com                                        | RateGain
 responder.co.il                                  | RavMesserLtd
 thirdwatch.ai                                    | RazorPay
 retargeter.com                                   | ReTargeter
@@ -3969,6 +3989,7 @@ sendiio.app                                      | Sendiio
 servenobid.com                                   | ServeNoBid
 sevenads.net                                     | SevenAds
 sexinyourcity.com                                | SexInYourCity
+seznam.cz                                        | Seznam
 libertystmedia.com                               | ShaftTraffic
 shareasale.com                                   | ShareASale
 sharethis.com                                    | ShareThis
@@ -4135,6 +4156,7 @@ tailtarget.com                                   | TOTVS
 ttarget.ru                                       | TTarget
 goldbach.com                                     | TXGroup
 goldbachgroup.com                                | TXGroup
+bizrate.com                                      | Taboola
 connexity.com                                    | Taboola
 connexity.net                                    | Taboola
 perfectmarket.com                                | Taboola
@@ -4259,6 +4281,8 @@ twitter.jp                                       | Twitter
 x.com                                            | Twitter
 twyn.com                                         | Twyn Group
 tyroo.com                                        | Tyroo
+ad-stir.com                                      | UNITED Marketing Technologies
+uol.com.br                                       | UOL
 usocial.pro                                      | USocial
 utarget.ru                                       | UTarget
 umbel.com                                        | Umbel
@@ -4383,8 +4407,6 @@ vserv.com                                        | Vserv
 vserv.mobi                                       | Vserv
 vtex.com.br                                      | Vtex
 mediabong.com                                    | Vuble
-zedo.com                                         | WBD
-zincx.com                                        | WBD
 accelerator-media.com                            | WPP
 compete.com                                      | WPP
 decdna.net                                       | WPP
@@ -4415,6 +4437,8 @@ getpolymorph.com                                 | Walmart
 punchtab.com                                     | Walmart
 bleacherreport.net                               | Warner Bros. Discovery
 turner.com                                       | Warner Bros. Discovery
+zedo.com                                         | Warner Bros. Discovery
+zincx.com                                        | Warner Bros. Discovery
 warumbistdusoarm.space                           | Warumbistdusoarm
 wayfair.com                                      | Wayfair
 weatherwidget.io                                 | WeatherWidget
@@ -4601,6 +4625,7 @@ api.adquery.io                                   | adQuery
 adhood.com                                       | adhood
 adnologies.com                                   | adnologies
 heias.com                                        | adnologies
+adpartner.pro                                    | adpartner.pro
 adscale.de                                       | adscale
 adsxtits.com                                     | adsxtits.com
 adx1.com                                         | adx1.com
@@ -4737,6 +4762,7 @@ iprospect.com                                    | iProspect
 fengkongcloud.com                                | iShumei
 ispot.tv                                         | iSpot
 oberon-media.com                                 | iWin
+izooto.com                                       | iZooto
 api.iafstats.com                                 | iafstats.com
 assets.ibcstack.com                              | ibcstack.com
 ijhyugb.com                                      | ijhyugb.com
@@ -4762,6 +4788,7 @@ mcizas.com                                       | mcizas.com
 mdhv.io                                          | mdhv.io
 media-rockstargames-com.akamaized.net            | media-rockstargames-com.akamaized.net
 media.net                                        | media.net
+metricswpsh.com                                  | metricswpsh.com
 mmcdn.com                                        | mmcdn.com
 web.static.mmcdn.com                             | mmcdn.com
 static.mocortech.com                             | mocortech.com
@@ -4834,6 +4861,7 @@ addynamix.com                                    | wakeballast
 webtrafficsource.com                             | webtrafficsource.com
 amung.us                                         | whos.amung.us
 wpadmngr.com                                     | wpadmngr
+wpshsdk.com                                      | wpshsdk.com
 xdiwbc.com                                       | xdiwbc.com
 yieldlove-ad-serving.net                         | yieldlove-ad-serving.net
 youknowbest.com                                  | youknowbest
@@ -4953,7 +4981,6 @@ pi.googleadshost.net                             |
 platform-websdk.transmitsecurity.io              |
 player.fox.com                                   |
 podname.com                                      |
-pxlclnmdecom-a.akamaihd.net                      |
 qiota.com                                        |
 registry.api.cnn.io                              |
 repo.incognia.com                                |
