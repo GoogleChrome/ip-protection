@@ -432,6 +432,10 @@ continue to act as a platform for collecting this feedback during the
 development phase. This feedback will be considered for refining our proposal
 and shaping the roadmap for IP Protection.
 
+To report issues related to the deployment of IP Protection, including site
+compatibility or bugs, please file an issue in the public
+[Chromium tracker](https://issues.chromium.org/issues/new?component=1456782&template=1943293).
+
 ### IP Protection and VPNs
 
 IP Protection and VPN services have distinct purposes and features. While a VPN
