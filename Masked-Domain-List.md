@@ -9,6 +9,11 @@ domain, but the company listed is not accurate, please see
 [Related Website Sets Submission Guidelines](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md)
 to amend this.
 
+**Impacted by Script Blocking**: Domains on the MDL are affected by script blocking in one 
+of three ways: they are not impacted, specific URLs are blocked from that domain, or the 
+entire domain is blocked. For further details on script blocking, please refer to the 
+[Mitigating API Misuse for Browser Re-Identification Explainer](https://github.com/explainers-by-googlers/script-blocking). 
+
 Disclaimer: Google isn't responsible for the contents of the domains and the
 associated websites, and will follow existing takedown protocols when removing
 entries.
