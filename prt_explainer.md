@@ -149,7 +149,7 @@ serialized `PRTStruct` defined below.
 ```
 struct {
  uint8 version;
- /* size of u and e depends on version, size is 29 for version 1 */
+ /* size of u and e depends on version, size is 33 for version 1 */
  opaque u<0..2^16-1>;
  opaque e<0..2^16-1>;
  /* Used to identify the corresponding key/secrets to decrypt */
