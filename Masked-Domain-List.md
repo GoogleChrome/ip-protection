@@ -61,7 +61,7 @@ ai.trk42.net                                     | 42Ads                        
 63squares.com                                    | 63 Squares                                                     | Not Impacted By Script Blocking
 6sc.co                                           | 6sense                                                         | Not Impacted By Script Blocking
 6sense.com                                       | 6sense                                                         | Not Impacted By Script Blocking
-7ool.net                                         | 7ool.net                                                       | Entire Domain Blocked
+7ool.net                                         | 7ool.net                                                       | Not Impacted By Script Blocking
 8d8.biz                                          | 8d8.biz                                                        | Not Impacted By Script Blocking
 91app.com                                        | 91App                                                          | Not Impacted By Script Blocking
 cms.cdn.91app.com                                | 91App                                                          | Entire Domain Blocked
@@ -1050,7 +1050,7 @@ kindhush.com                                     | Admiral                      
 kitesquirrel.com                                 | Admiral                                                        | Not Impacted By Script Blocking
 knitstamp.com                                    | Admiral                                                        | Not Impacted By Script Blocking
 knottyswing.com                                  | Admiral                                                        | Not Impacted By Script Blocking
-laboredlocket.com                                | Admiral                                                        | Entire Domain Blocked
+laboredlocket.com                                | Admiral                                                        | Not Impacted By Script Blocking
 lameletters.com                                  | Admiral                                                        | Not Impacted By Script Blocking
 lamplow.com                                      | Admiral                                                        | Not Impacted By Script Blocking
 largebrass.com                                   | Admiral                                                        | Not Impacted By Script Blocking
@@ -1274,7 +1274,7 @@ powderjourney.com                                | Admiral                      
 powerfulblends.com                               | Admiral                                                        | Not Impacted By Script Blocking
 preciousplanes.com                               | Admiral                                                        | Not Impacted By Script Blocking
 prefixpatriot.com                                | Admiral                                                        | Not Impacted By Script Blocking
-prepareplanes.com                                | Admiral                                                        | Not Impacted By Script Blocking
+prepareplanes.com                                | Admiral                                                        | Entire Domain Blocked
 presetrabbits.com                                | Admiral                                                        | Not Impacted By Script Blocking
 previousplayground.com                           | Admiral                                                        | Not Impacted By Script Blocking
 priceypies.com                                   | Admiral                                                        | Not Impacted By Script Blocking
@@ -2221,6 +2221,7 @@ ob.forroundprince.com                            | CHEQ                         
 ob.healthroundprince.com                         | CHEQ                                                           | Entire Domain Blocked
 ob.herbgreencolumn.com                           | CHEQ                                                           | Entire Domain Blocked
 ob.iseaskies.com                                 | CHEQ                                                           | Entire Domain Blocked
+ob.michiganrobotflower.com                       | CHEQ                                                           | Entire Domain Blocked
 ob.ofgreencolumn.com                             | CHEQ                                                           | Entire Domain Blocked
 ob.powerstarsbuilding.com                        | CHEQ                                                           | Entire Domain Blocked
 ob.protoroundprince.com                          | CHEQ                                                           | Entire Domain Blocked
@@ -2235,7 +2236,6 @@ ob.youseasky.com                                 | CHEQ                         
 ofgreencolumn.com                                | CHEQ                                                           | Not Impacted By Script Blocking
 powerstarsbuilding.com                           | CHEQ                                                           | Not Impacted By Script Blocking
 protoroundprince.com                             | CHEQ                                                           | Not Impacted By Script Blocking
-rocky.lordofthesuperfrogs.com                    | CHEQ                                                           | Entire Domain Blocked
 romero.ediemidnightzombies.com                   | CHEQ                                                           | Entire Domain Blocked
 roundprinceweb.com                               | CHEQ                                                           | Not Impacted By Script Blocking
 seaskydvd.com                                    | CHEQ                                                           | Not Impacted By Script Blocking
@@ -2570,8 +2570,6 @@ merkleinc.com                                    | Dentsu                       
 rimmkaufman.com                                  | Dentsu                                                         | Not Impacted By Script Blocking
 rkdms.com                                        | Dentsu                                                         | Not Impacted By Script Blocking
 securedvisit.com                                 | Dentsu                                                         | Not Impacted By Script Blocking
-despegar.com                                     | Despegar                                                       | Not Impacted By Script Blocking
-securegtm.despegar.com                           | Despegar                                                       | Entire Domain Blocked
 dp-dhl.com                                       | Deutsche Post DHL                                              | Not Impacted By Script Blocking
 developermedia.com                               | Developer Media                                                | Not Impacted By Script Blocking
 lqcdn.com                                        | Developer Media                                                | Not Impacted By Script Blocking
@@ -2756,6 +2754,7 @@ fimserve.com                                     | Fox One Stop Media           
 foxonestop.com                                   | Fox One Stop Media                                             | Not Impacted By Script Blocking
 mobsmith.com                                     | Fox One Stop Media                                             | Not Impacted By Script Blocking
 myads.com                                        | Fox One Stop Media                                             | Not Impacted By Script Blocking
+bt.fraud0.com                                    | Fraud0                                                         | Entire Domain Blocked
 fraud0.com                                       | Fraud0                                                         | Not Impacted By Script Blocking
 glotgrx.com                                      | Fraudlogix                                                     | Not Impacted By Script Blocking
 yabidos.com                                      | Fraudlogix                                                     | Not Impacted By Script Blocking
@@ -3238,6 +3237,7 @@ pulsepoint.com                                   | Internet Brands              
 slunecnice.cz                                    | Internet Info                                                  | Not Impacted By Script Blocking
 interpolls.com                                   | Interpolls                                                     | Not Impacted By Script Blocking
 im-apps.net                                      | IntimateMerger                                                 | Not Impacted By Script Blocking
+creditkarmacdn-a.akamaihd.net                    | Intuit                                                         | Not Impacted By Script Blocking
 inuvo.com                                        | Inuvo                                                          | Not Impacted By Script Blocking
 netseer.com                                      | Inuvo                                                          | Not Impacted By Script Blocking
 investingchannel.com                             | InvestingChannel                                               | Not Impacted By Script Blocking
@@ -3395,6 +3395,7 @@ lunamedia.live                                   | LunaMedia                    
 ppcprotect.com                                   | Lunio                                                          | Not Impacted By Script Blocking
 lynchpin.com                                     | Lynchpin                                                       | Not Impacted By Script Blocking
 lypn.com                                         | Lynchpin                                                       | Not Impacted By Script Blocking
+img.m314xw.com                                   | MCW Consulting                                                 | Entire Domain Blocked
 m314xw.com                                       | MCW Consulting                                                 | Not Impacted By Script Blocking
 clickdistrict.com                                | MGI                                                            | Not Impacted By Script Blocking
 creative-serving.com                             | MGI                                                            | Not Impacted By Script Blocking
@@ -3487,7 +3488,6 @@ scanalert.com                                    | McAfee                       
 mdotm.com                                        | MdotM                                                          | Not Impacted By Script Blocking
 kampyle.com                                      | Medallia                                                       | Not Impacted By Script Blocking
 medallia.com                                     | Medallia                                                       | Not Impacted By Script Blocking
-stats.tazeros.com                                | Media Zoom                                                     | Entire Domain Blocked
 tazeros.com                                      | Media Zoom                                                     | Not Impacted By Script Blocking
 mediabrix.com                                    | MediaBrix                                                      | Not Impacted By Script Blocking
 mfadsrvr.com                                     | MediaForce                                                     | Not Impacted By Script Blocking
@@ -3614,8 +3614,8 @@ estat.com                                        | Médiamétrie-eStat          
 nrich.ai                                         | N.Rich                                                         | Not Impacted By Script Blocking
 newscgp.com                                      | NCAudienceExchange                                             | Not Impacted By Script Blocking
 newsinc.com                                      | NDN                                                            | Not Impacted By Script Blocking
-static.affilae.com                               | NETILUM                                                        | Not Impacted By Script Blocking
-p.nfltags.com                                    | NFL                                                            | Some URLs are Blocked
+static.affilae.com                               | NETILUM                                                        | Entire Domain Blocked
+p.nfltags.com                                    | NFL                                                            | Entire Domain Blocked
 ngenix.net                                       | NGENIX                                                         | Not Impacted By Script Blocking
 rum-static.ngenix.net                            | NGENIX                                                         | Entire Domain Blocked
 gfk.com                                          | NIQ                                                            | Not Impacted By Script Blocking
@@ -3773,7 +3773,7 @@ operamediaworks.com                              | Opera                        
 operasoftware.com                                | Opera                                                          | Not Impacted By Script Blocking
 opinary.com                                      | Opinary                                                        | Not Impacted By Script Blocking
 ownpage.fr                                       | Opper                                                          | Not Impacted By Script Blocking
-qiota.com                                        | Opper                                                          | Not Impacted By Script Blocking
+qiota.com                                        | Opper                                                          | Entire Domain Blocked
 optmd.com                                        | OptMD                                                          | Not Impacted By Script Blocking
 optad360.io                                      | Optad360                                                       | Not Impacted By Script Blocking
 optify.net                                       | Optify                                                         | Not Impacted By Script Blocking
@@ -3920,6 +3920,8 @@ prometheusintelligencetechnology.com             | PrometheusIntelligenceTechnol
 propellerads.com                                 | Propeller Ads                                                  | Not Impacted By Script Blocking
 rtmark.net                                       | Propeller Ads                                                  | Not Impacted By Script Blocking
 propelleremail.co.uk                             | PropellerEmail                                                 | Not Impacted By Script Blocking
+despegar.com                                     | Prosus                                                         | Not Impacted By Script Blocking
+securegtm.despegar.com                           | Prosus                                                         | Entire Domain Blocked
 cdn.pubfuture-ad.com                             | PubFuture                                                      | Entire Domain Blocked
 pubfuture-ad.com                                 | PubFuture                                                      | Not Impacted By Script Blocking
 pubmatic.com                                     | PubMatic                                                       | Not Impacted By Script Blocking
@@ -4072,7 +4074,6 @@ roxr.net                                         | Roxr                         
 staticstuff.net                                  | Roxr                                                           | Not Impacted By Script Blocking
 rutarget.ru                                      | RuTarget                                                       | Not Impacted By Script Blocking
 rudderlabs.com                                   | RudderStack                                                    | Not Impacted By Script Blocking
-gog.salesmanago.com                              | SALESmanago                                                    | Entire Domain Blocked
 jetsmart.salesmanago.com                         | SALESmanago                                                    | Entire Domain Blocked
 rasp.salesmanago.com                             | SALESmanago                                                    | Entire Domain Blocked
 salesmanago.com                                  | SALESmanago                                                    | Not Impacted By Script Blocking
@@ -4870,7 +4871,6 @@ voicefive.com                                    | comScore                     
 contents-search-windows.com                      | contents-search-windows.com                                    | Not Impacted By Script Blocking
 convertexperiments.com                           | convertexperiments.com                                         | Not Impacted By Script Blocking
 convertlanguage.com                              | convertlanguage.com                                            | Not Impacted By Script Blocking
-creditkarmacdn-a.akamaihd.net                    | creditkarmacdn-a.akamaihd.net                                  | Not Impacted By Script Blocking
 curoax.com                                       | curoax.com                                                     | Entire Domain Blocked
 t.daexauto.com                                   | daexauto.com                                                   | Not Impacted By Script Blocking
 deliveryjs.com                                   | deliveryjs.com                                                 | Not Impacted By Script Blocking
@@ -4911,7 +4911,7 @@ expo-max.com                                     | expo-MAX                     
 ezymarketer.net                                  | ezymarketer                                                    | Not Impacted By Script Blocking
 fanza.cc                                         | fanza.cc                                                       | Not Impacted By Script Blocking
 fixidle.com                                      | fixidle.com                                                    | Not Impacted By Script Blocking
-assets-ah.flixcdn.com                            | flixcdn.com                                                    | Entire Domain Blocked
+assets-ah.flixcdn.com                            | flixcdn.com                                                    | Some URLs are Blocked
 flixcdn.com                                      | flixcdn.com                                                    | Not Impacted By Script Blocking
 fuseplatform.net                                 | fuseplatform.net                                               | Not Impacted By Script Blocking
 dsp-cdn.gammaplatform.com                        | gammaplatform.com                                              | Entire Domain Blocked
@@ -4967,7 +4967,7 @@ onthe.io                                         | iotechnologies               
 ipify.org                                        | ipify                                                          | Not Impacted By Script Blocking
 ismatlab.com                                     | ismatlab.com                                                   | Not Impacted By Script Blocking
 ivitrack.com                                     | ividence                                                       | Not Impacted By Script Blocking
-jioadsweb.akamaized.net                          | jioadsweb.akamaized.net                                        | Not Impacted By Script Blocking
+jioadsweb.akamaized.net                          | jioadsweb.akamaized.net                                        | Entire Domain Blocked
 justuno.com                                      | justuno                                                        | Not Impacted By Script Blocking
 km0trk.com                                       | km0trk.com                                                     | Not Impacted By Script Blocking
 ktkjmp.com                                       | ktkjmp.com                                                     | Not Impacted By Script Blocking
@@ -5086,29 +5086,31 @@ s3-ap-southeast-1.amazonaws.com                  | [PSL Domain](https://en.wikip
 s3.amazonaws.com                                 | [PSL Domain](https://en.wikipedia.org/wiki/Public_Suffix_List) | Some URLs are Blocked
 s3.us-west-2.amazonaws.com                       | [PSL Domain](https://en.wikipedia.org/wiki/Public_Suffix_List) | Some URLs are Blocked
 11ctch.com                                       |                                                                | Entire Domain Blocked
+22596.weligillysies.com                          |                                                                | Entire Domain Blocked
 23751.2475april2024.com                          |                                                                | Entire Domain Blocked
+28464.weligillysies.com                          |                                                                | Entire Domain Blocked
 29156.weligillysies.com                          |                                                                | Entire Domain Blocked
 29217.croomaingly.com                            |                                                                | Entire Domain Blocked
 31050.weligillysies.com                          |                                                                | Entire Domain Blocked
 32451.weligillysies.com                          |                                                                | Entire Domain Blocked
 33260.wortindely.com                             |                                                                | Entire Domain Blocked
-35294.wortindely.com                             |                                                                | Entire Domain Blocked
+35471.2514june2024.com                           |                                                                | Entire Domain Blocked
 35621.spiddefrexpron.com                         |                                                                | Entire Domain Blocked
 8731.aulogirefaure.com                           |                                                                | Entire Domain Blocked
 8ctch.com                                        |                                                                | Entire Domain Blocked
-8tip5whk.xyz                                     |                                                                | Entire Domain Blocked
 a.acredo.space                                   |                                                                | Entire Domain Blocked
 a.topincome.cc                                   |                                                                | Entire Domain Blocked
 adc.indextops.com                                |                                                                | Entire Domain Blocked
 addin1.name                                      |                                                                | Entire Domain Blocked
 adzilla1.name                                    |                                                                | Entire Domain Blocked
+agr.demoaccount.site                             |                                                                | Entire Domain Blocked
 airnavradar.com                                  |                                                                | Some URLs are Blocked
-ak-s-cw.tripcdn.com                              |                                                                | Some URLs are Blocked
+ak-s-cw.tripcdn.com                              |                                                                | Entire Domain Blocked
+anmq6by5.xyz                                     |                                                                | Entire Domain Blocked
 apps.pingone.com                                 |                                                                | Entire Domain Blocked
-asg.videobaba.xyz                                |                                                                | Some URLs are Blocked
+asg.videobaba.xyz                                |                                                                | Entire Domain Blocked
 assets.blings.io                                 |                                                                | Entire Domain Blocked
 assets.falabella.com                             |                                                                | Entire Domain Blocked
-assets.funraise.io                               |                                                                | Entire Domain Blocked
 aw-s.tripcdn.com                                 |                                                                | Entire Domain Blocked
 buzzster.com                                     |                                                                | Not Impacted By Script Blocking
 cdn-onmar.novaontech.com                         |                                                                | Entire Domain Blocked
@@ -5124,7 +5126,6 @@ cs.deviceatlas-cdn.com                           |                              
 d19rpgkrjeba2z.cloudfront.net                    |                                                                | Entire Domain Blocked
 d1af033869koo7.cloudfront.net                    |                                                                | Entire Domain Blocked
 d1cr9zxt7u0sgu.cloudfront.net                    |                                                                | Entire Domain Blocked
-d1mahjlm.xyz                                     |                                                                | Entire Domain Blocked
 d1vg5xiq7qffdj.cloudfront.net                    |                                                                | Entire Domain Blocked
 d291vdycu0ht11.cloudfront.net                    |                                                                | Some URLs are Blocked
 d38xvr37kwwhcm.cloudfront.net                    |                                                                | Entire Domain Blocked
@@ -5132,7 +5133,7 @@ d3pc1xvrcw35tl.cloudfront.net                    |                              
 dcf.espn.com                                     |                                                                | Some URLs are Blocked
 df.commonvisitor.site                            |                                                                | Entire Domain Blocked
 duube1y6ojsji.cloudfront.net                     |                                                                | Entire Domain Blocked
-dz7188oz6lnyb.cloudfront.net                     |                                                                | Some URLs are Blocked
+dz7188oz6lnyb.cloudfront.net                     |                                                                | Entire Domain Blocked
 earthups.com                                     |                                                                | Entire Domain Blocked
 embed.cartfulsolutions.com                       |                                                                | Entire Domain Blocked
 enma.livetwo.space                               |                                                                | Entire Domain Blocked
@@ -5141,20 +5142,22 @@ ex.exnessstats.com                               |                              
 fabcharting.com                                  |                                                                | Entire Domain Blocked
 files.manuscdn.com                               |                                                                | Some URLs are Blocked
 fpjsworker.checkout.com                          |                                                                | Entire Domain Blocked
-hiveplayer-static.bamgrid.com                    |                                                                | Some URLs are Blocked
-img.b112j.com                                    |                                                                | Some URLs are Blocked
+hellounbox.com                                   |                                                                | Entire Domain Blocked
+ilpgfdbc.xyz                                     |                                                                | Entire Domain Blocked
+img.b112j.com                                    |                                                                | Entire Domain Blocked
 img.e491328.com                                  |                                                                | Entire Domain Blocked
 img.j189eb.com                                   |                                                                | Entire Domain Blocked
 img.m167cw.com                                   |                                                                | Entire Domain Blocked
 js.upscope.io                                    |                                                                | Entire Domain Blocked
-kuti8iar.xyz                                     |                                                                | Entire Domain Blocked
-libraryfacts.com                                 |                                                                | Entire Domain Blocked
+ktktkt.ktlasik.space                             |                                                                | Entire Domain Blocked
 m.media-amazon.com                               |                                                                | Some URLs are Blocked
 micro-assets.foodora.com                         |                                                                | Some URLs are Blocked
 my.hornblower.com                                |                                                                | Some URLs are Blocked
+namastedharma.com                                |                                                                | Entire Domain Blocked
 now.plsgotoasg.com                               |                                                                | Entire Domain Blocked
 ob.7roundprince.com                              |                                                                | Entire Domain Blocked
 ob.youstarsbuilding.com                          |                                                                | Entire Domain Blocked
+p15-tiktok-ads-us.tiktokcdn1.xyz                 |                                                                | Entire Domain Blocked
 platform-websdk.transmitsecurity.io              |                                                                | Entire Domain Blocked
 platform.apps.allstarunion.com                   |                                                                | Entire Domain Blocked
 player.fox.com                                   |                                                                | Entire Domain Blocked
@@ -5166,20 +5169,24 @@ s-cdn.anthropic.com                              |                              
 s1cdn.vnecdn.net                                 |                                                                | Some URLs are Blocked
 scenicchicago.com                                |                                                                | Entire Domain Blocked
 scripts.poll-maker.com                           |                                                                | Entire Domain Blocked
-sf-flow-web-cdn.ciciaicdn.com                    |                                                                | Some URLs are Blocked
 sf16-web-tos-buz.capcutstatic.com                |                                                                | Some URLs are Blocked
 shareaholic.net                                  |                                                                | Not Impacted By Script Blocking
-spellknight.com                                  |                                                                | Entire Domain Blocked
+sp-gn.com                                        |                                                                | Some URLs are Blocked
+spellknight.com                                  |                                                                | Some URLs are Blocked
 st-n.ads7-adnow.com                              |                                                                | Entire Domain Blocked
 static.airwallex.com                             |                                                                | Entire Domain Blocked
+static.pl-01.cdn-platform.com                    |                                                                | Entire Domain Blocked
 static.staticspic.com                            |                                                                | Some URLs are Blocked
 storage.googleapis.com                           |                                                                | Some URLs are Blocked
 subseacare.com                                   |                                                                | Entire Domain Blocked
+tags-assets.mlytics.com                          |                                                                | Entire Domain Blocked
 take.quiz-maker.com                              |                                                                | Entire Domain Blocked
 tracking.vnncdn.net                              |                                                                | Entire Domain Blocked
 trkwwtarget.cloud                                |                                                                | Entire Domain Blocked
+unloadyourself.com                               |                                                                | Entire Domain Blocked
 us-west-1.cdn1cloudflare.xyz                     |                                                                | Entire Domain Blocked
 viadata.store                                    |                                                                | Entire Domain Blocked
 webstatic.hoyoverse.com                          |                                                                | Entire Domain Blocked
 wisej1355.com                                    |                                                                | Entire Domain Blocked
 worldrealize.com                                 |                                                                | Entire Domain Blocked
+xd51vd1y.xyz                                     |                                                                | Entire Domain Blocked
