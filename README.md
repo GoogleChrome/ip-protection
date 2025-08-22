@@ -268,31 +268,7 @@ multiple domains enhances user privacy, it offers limited privacy gain when
 those domains are service domains under common ownership or, to a certain
 extent, if they have an affiliation that is clearly presented to users.
 Additionally, it imposes an unnecessary burden for web developers operating such
-websites. As such, Privacy Sandbox needs to provide some model that reduces the
-burden where reasonable to do so.
-
-Given this is a similar problem statement to that which [Related Website
-Sets](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets)
-(RWS) was created to address, IP Protection will build upon RWS as a means of
-determining the boundaries between first- and third-party contexts such that
-domains on the list that appear embedded on a website in the same Related
-Website Set will be treated as first-party context.
-
-For example, consider an analytics company that operates a domain named “B”.
-This domain serves as both its top-level domain and as an embedded domain for
-gathering data related to its analytics business, which has led Domain B to be
-included on the MDL. Domain B may be encountered in three different situations:
-
-1. Domain “B” loads in another top level domain (e.g. domain “A”) with which
-    it does not share a RWS. The connection to B will be proxied and the user's
-    IP address will not be visible to the site.
-2. A user navigates to domain “B” (either by typing the domain directly into
-    the browser or by navigating through a link). In this case, B will be able
-    to observe the user’s original IP address, instead of the proxied IP
-    address.
-3. Domain “B” loads in another top level domain (e.g. domain “C”) that belongs
-    to the same Related Website Set. B will continue to receive the user's
-    original IP address.
+websites.
 
 <table>
   <tr>
@@ -317,7 +293,7 @@ included on the MDL. Domain B may be encountered in three different situations:
         <img src="./images/mdl-three.png"
              alt="A figure showing Site C embedding Site B">
         <figcaption>
-          Site C &amp; B are part of a RWS, Site B gets the original IP
+          Site C &amp; B are owned by the same entity, Site B gets the original IP
         </figcaption>
       <figure>
     </td>
@@ -331,18 +307,13 @@ part of the same domain and will therefore also receive the same treatment.
 Additionally, any subdomains under domains in the [private section of the Public
 Suffix
 List](https://publicsuffix.org/list/public_suffix_list.dat#:~:text=//%20%3D%3D%3DBEGIN%20PRIVATE%20DOMAINS%3D%3D%3D)
-would be considered third-party to each other unless they are in the same RWS;
-since such a domain would become an "eTLD", and hence each subdomain is
-considered its own registrable domain. RWS will be honored for IP Protection in
-Incognito independent of whether RWS is applicable to third-party cookie
-blocking in Incognito.
+would be considered third-party to each other.
 
-To reduce potential disruptions to websites and services, until companies create
-Related Website Sets, Chrome will temporarily employ a best effort approach to
+Chrome will temporarily employ a best effort approach to
 deduce domain ownership leveraging an entity mapping created by
-[Disconnect.me](https://Disconnect.me). Additionally, in cases where a company
-has not previously submitted a RWS and our deduced approach contains errors, the
-company has the option to submit a RWS to rectify any necessary corrections.
+[Disconnect.me](https://Disconnect.me). Chrome is partnering with Disconnect to
+determine first vs. third-party context. If you believe that your domain is only
+loading in a first-party context, please contact mdl_inquiries@disconnect.me.
 
 ### Anti-Fraud and Anti-Spam Strategy and Implementation
 
