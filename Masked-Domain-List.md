@@ -429,7 +429,7 @@ confesschairs.com                                             | Admiral         
 consciouscheese.com                                           | Admiral                                                        | Not Impacted By Script Blocking
 consumerzero.com                                              | Admiral                                                        | Not Impacted By Script Blocking
 coolguesthouse.com                                            | Admiral                                                        | Entire Domain Blocked
-copycarpenter.com                                             | Admiral                                                        | Entire Domain Blocked
+copycarpenter.com                                             | Admiral                                                        | Not Impacted By Script Blocking
 copyfranchise.com                                             | Admiral                                                        | Not Impacted By Script Blocking
 cozytryst.com                                                 | Admiral                                                        | Not Impacted By Script Blocking
 craftessays.com                                               | Admiral                                                        | Not Impacted By Script Blocking
@@ -2483,10 +2483,6 @@ adsummos.net                                                  | Korrelate       
 krushmedia.com                                                | KrushMedia                                                     | Not Impacted By Script Blocking
 kueezrtb.com                                                  | Kueez                                                          | Not Impacted By Script Blocking
 ixs1.net                                                      | LSC Digital                                                    | Not Impacted By Script Blocking
-line-scdn.net                                                 | LYCorp                                                         | Not Impacted By Script Blocking
-line.me                                                       | LYCorp                                                         | Not Impacted By Script Blocking
-yahoo.co.jp                                                   | LYCorp                                                         | Not Impacted By Script Blocking
-yimg.jp                                                       | LYCorp                                                         | Not Impacted By Script Blocking
 getlasso.co                                                   | Lasso                                                          | Not Impacted By Script Blocking
 lasso.link                                                    | Lasso                                                          | Not Impacted By Script Blocking
 layer-ads.net                                                 | Layer Ads                                                      | Not Impacted By Script Blocking
@@ -2786,8 +2782,11 @@ ntv.io                                                        | Nativo          
 postrelease.com                                               | Nativo                                                         | Not Impacted By Script Blocking
 navdmp.com                                                    | Navegg                                                         | Not Impacted By Script Blocking
 navegg.com                                                    | Navegg                                                         | Not Impacted By Script Blocking
+line-scdn.net                                                 | Naver                                                          | Not Impacted By Script Blocking
+line.me                                                       | Naver                                                          | Not Impacted By Script Blocking
 pstatic.net                                                   | Naver                                                          | Not Impacted By Script Blocking
-wtm.pstatic.net                                               | Naver                                                          | Entire Domain Blocked
+yahoo.co.jp                                                   | Naver                                                          | Not Impacted By Script Blocking
+yimg.jp                                                       | Naver                                                          | Not Impacted By Script Blocking
 ubermedia.com                                                 | Near                                                           | Not Impacted By Script Blocking
 negishim.com                                                  | Negishim                                                       | Entire Domain Blocked
 negishim.org                                                  | Negishim                                                       | Not Impacted By Script Blocking
@@ -2894,7 +2893,7 @@ livecamcdn.com                                                | OnCam           
 airpr.com                                                     | Onclusive                                                      | Not Impacted By Script Blocking
 itsoneiota.com                                                | One iota                                                       | Not Impacted By Script Blocking
 oneiota.co.uk                                                 | One iota                                                       | Not Impacted By Script Blocking
-ad-specs.guoshipartners.com                                   | OneAd                                                          | Entire Domain Blocked
+ad-specs.guoshipartners.com                                   | OneAd                                                          | Some URLs are Blocked
 guoshipartners.com                                            | OneAd                                                          | Not Impacted By Script Blocking
 onevision.com.tw                                              | OneAd                                                          | Not Impacted By Script Blocking
 onef.pro                                                      | OneF                                                           | Not Impacted By Script Blocking
@@ -4142,6 +4141,7 @@ heyaiii111iidsfsdbfjb132222ffco.xyz                           | heyaiii111iidsfs
 29085.2489may2024.com                                         | horonstogly.com                                                | Entire Domain Blocked
 29508.2449march2024.com                                       | horonstogly.com                                                | Entire Domain Blocked
 salbraddrepilly.com                                           | horonstogly.com                                                | Not Impacted By Script Blocking
+config.htplayground.com                                       | htplayground.com                                               | Entire Domain Blocked
 htplayground.com                                              | htplayground.com                                               | Not Impacted By Script Blocking
 livechatinc.com                                               | https://<span></span>text.com                                  | Not Impacted By Script Blocking
 ib-ibi.com                                                    | iBehavior                                                      | Not Impacted By Script Blocking
@@ -4285,7 +4285,6 @@ unmectappic.com                                               | unmectappic.com 
 up-value.de                                                   | up-value                                                       | Not Impacted By Script Blocking
 usbrowserspeed.com                                            | usbrowserspeed.com                                             | Not Impacted By Script Blocking
 viadata.store                                                 | viadata.store                                                  | Entire Domain Blocked
-asg.videobaba.xyz                                             | videobaba.xyz                                                  | Entire Domain Blocked
 videobaba.xyz                                                 | videobaba.xyz                                                  | Not Impacted By Script Blocking
 vrtcal.com                                                    | vrtcal                                                         | Not Impacted By Script Blocking
 addynamix.com                                                 | wakeballast                                                    | Not Impacted By Script Blocking
@@ -4329,8 +4328,9 @@ s3.us-west-2.amazonaws.com                                    | [PSL Domain](htt
 35947.tdslinetraffic.com                                      |                                                                | Entire Domain Blocked
 a.dremp.xyz                                                   |                                                                | Entire Domain Blocked
 admin-pipeline.upsun-eu-2.observability-pipeline.blackfire.io |                                                                | Entire Domain Blocked
+adtag.cloud                                                   |                                                                | Entire Domain Blocked
+assets.imedao.com                                             |                                                                | Entire Domain Blocked
 assets.macysassets.com                                        |                                                                | Some URLs are Blocked
-assets.psmcdn.net                                             |                                                                | Entire Domain Blocked
 attraxcdnprod1-freshed3dgayb7c3.z01.azurefd.net               |                                                                | Some URLs are Blocked
 brazino-cdnsrv-cst.org                                        |                                                                | Some URLs are Blocked
 bte29912.xyz                                                  |                                                                | Entire Domain Blocked
@@ -4338,8 +4338,6 @@ cdn.dfsdk.com                                                 |                 
 cdn.last9.io                                                  |                                                                | Entire Domain Blocked
 cdn.snippet.abtshield.com                                     |                                                                | Entire Domain Blocked
 cdn.videoplayer.network                                       |                                                                | Entire Domain Blocked
-checkout.paze.com                                             |                                                                | Some URLs are Blocked
-client-static.bc.kambicdn.com                                 |                                                                | Some URLs are Blocked
 client.hsprotect.net                                          |                                                                | Entire Domain Blocked
 components.trynow.net                                         |                                                                | Entire Domain Blocked
 copilot.smartconvo.io                                         |                                                                | Entire Domain Blocked
@@ -4371,7 +4369,6 @@ opopop.oplaksik.online                                        |                 
 prod-adenty-cdn.azureedge.net                                 |                                                                | Entire Domain Blocked
 s.rsg.sc                                                      |                                                                | Some URLs are Blocked
 score.jcsc.online                                             |                                                                | Entire Domain Blocked
-sdk.justsell.live                                             |                                                                | Entire Domain Blocked
 sf-flow-web-cdn.ciciaicdn.com                                 |                                                                | Some URLs are Blocked
 sf-p.rtrcdn.com                                               |                                                                | Some URLs are Blocked
 sol.kjhbskd.com                                               |                                                                | Entire Domain Blocked
