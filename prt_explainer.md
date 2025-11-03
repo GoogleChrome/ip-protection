@@ -1,3 +1,11 @@
+Some Privacy Sandbox technologies are being phased out. Please see our
+[Update on Plans for Privacy Sandbox Technologies](https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/).
+
+[Privacy Sandbox feature status](https://privacysandbox.google.com/overview/status)
+provides more information about the status of individual APIs and platform features.
+
+This repository will be archived and no longer updated.
+
 # Probabilistic Reveal Tokens
 
 ## Introduction
@@ -180,7 +188,7 @@ corresponding period and verify the reveal rate, ensuring that the issuer is
 behaving honestly.
 
 For Google's implementation of the PRT issuer, we will publish keys to Github.
-We will update the explainer with the Github repository at launch. 
+We will update the explainer with the Github repository at launch.
 
 When an origin receives a PRT, it will store the PRT until the corresponding
 private key and HMAC secret are published by the issuer. The origin can then
